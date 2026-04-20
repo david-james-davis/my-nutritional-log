@@ -2,12 +2,12 @@
   "date": "2026-04-20",
   "timezone": "America/Los_Angeles",
   "breakfast": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "Half medium sweet potato, 4 fried eggs, 1/2 tbsp ghee",
+    "calories": 394,
+    "fat": 25.7,
+    "protein": 26.2,
+    "carbohydrates": 13.9,
+    "fiber": 2.0
   },
   "lunch": {
     "mealName": "",
@@ -26,5 +26,5 @@
     "fiber": 0
   },
   "snacks": [],
-  "updatedAt": "2026-04-20T17:29:00Z"
+  "updatedAt": "2026-04-20T17:33:00Z"
 }
