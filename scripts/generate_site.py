@@ -2,7 +2,7 @@
 """Generate a static GitHub Pages site from nutritional log JSON entries."""
 
 import json
-import os
+from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
@@ -54,6 +54,58 @@ def macro_card(label, value, unit, color):
         </div>"""
 
 
+def build_chart_data(entries):
+    """Return JSON-serialisable dicts for daily and monthly charts."""
+    daily = {
+        "labels": [],
+        "calories": [],
+        "protein": [],
+        "fat": [],
+        "carbs": [],
+        "fiber": [],
+    }
+    monthly_buckets = defaultdict(lambda: defaultdict(list))
+
+    for e in entries:
+        dt = e["date"]
+        total = e.get("dailyTotal", {})
+        cals = total.get("calories", 0)
+        protein = total.get("protein", 0)
+        fat = total.get("fat", 0)
+        carbs = total.get("carbohydrates", 0)
+        fiber = total.get("fiber", 0)
+
+        daily["labels"].append(dt)
+        daily["calories"].append(cals)
+        daily["protein"].append(protein)
+        daily["fat"].append(fat)
+        daily["carbs"].append(carbs)
+        daily["fiber"].append(fiber)
+
+        # e.g. "2026-04" → human label "Apr 2026"
+        year, month, *_ = dt.split("-")
+        month_key = f"{year}-{month}"
+        monthly_buckets[month_key]["calories"].append(cals)
+        monthly_buckets[month_key]["protein"].append(protein)
+        monthly_buckets[month_key]["fat"].append(fat)
+        monthly_buckets[month_key]["carbs"].append(carbs)
+        monthly_buckets[month_key]["fiber"].append(fiber)
+
+    month_names = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+    monthly = {"labels": [], "calories": [], "protein": [], "fat": [], "carbs": [], "fiber": []}
+    for key in sorted(monthly_buckets):
+        year, month = key.split("-")
+        monthly["labels"].append(f"{month_names[int(month)-1]} {year}")
+        bucket = monthly_buckets[key]
+        for macro in ("calories", "protein", "fat", "carbs", "fiber"):
+            vals = bucket[macro]
+            monthly[macro].append(round(sum(vals) / len(vals), 1))
+
+    return daily, monthly
+
+
 def render_today_tab(entry):
     dt = entry["date"]
     total = entry.get("dailyTotal", {})
@@ -68,20 +120,9 @@ def render_today_tab(entry):
         meal = entry.get(key, {})
         if meal:
             meal_rows += meal_row(label, meal)
-
     for i, snack in enumerate(entry.get("snacks", []), 1):
         label = "Snack" if len(entry.get("snacks", [])) == 1 else f"Snack {i}"
         meal_rows += meal_row(label, snack)
-
-    running_total_rows = ""
-    for label, key in [("Breakfast", "breakfast"), ("Lunch", "lunch"), ("Dinner", "dinner")]:
-        meal = entry.get(key, {})
-        if meal and meal.get("mealName"):
-            running_total_rows += f"""
-            <tr>
-              <td>After {label}</td>
-              <td>{meal.get('calories', 0):g} kcal</td>
-            </tr>"""
 
     return f"""
       <div class="date-header">
@@ -101,13 +142,8 @@ def render_today_tab(entry):
         <table>
           <thead>
             <tr>
-              <th>Meal</th>
-              <th>Description</th>
-              <th>Calories</th>
-              <th>Protein</th>
-              <th>Fat</th>
-              <th>Carbs</th>
-              <th>Fiber</th>
+              <th>Meal</th><th>Description</th><th>Calories</th>
+              <th>Protein</th><th>Fat</th><th>Carbs</th><th>Fiber</th>
             </tr>
           </thead>
           <tbody>
@@ -147,21 +183,27 @@ def render_history_tab(entries):
 
     return f"""
       <h2>Historical Data</h2>
+
+      <div class="chart-section">
+        <h3>Daily Trends</h3>
+        <div class="chart-wrap"><canvas id="chartDaily"></canvas></div>
+      </div>
+
+      <div class="chart-section">
+        <h3>Monthly Averages</h3>
+        <div class="chart-wrap"><canvas id="chartMonthly"></canvas></div>
+      </div>
+
+      <h3 style="margin-top:2rem">All Entries</h3>
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
-              <th>Date</th>
-              <th>Calories</th>
-              <th>Protein</th>
-              <th>Fat</th>
-              <th>Carbs</th>
-              <th>Fiber</th>
+              <th>Date</th><th>Calories</th><th>Protein</th>
+              <th>Fat</th><th>Carbs</th><th>Fiber</th>
             </tr>
           </thead>
-          <tbody>
-            {rows}
-          </tbody>
+          <tbody>{rows}</tbody>
         </table>
       </div>"""
 
@@ -170,6 +212,10 @@ def generate_html(entries):
     latest = entries[-1]
     today_content = render_today_tab(latest)
     history_content = render_history_tab(entries)
+    daily, monthly = build_chart_data(entries)
+
+    daily_json = json.dumps(daily)
+    monthly_json = json.dumps(monthly)
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -177,6 +223,7 @@ def generate_html(entries):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nutritional Log</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
   <style>
     *, *::before, *::after {{ box-sizing: border-box; margin: 0; padding: 0; }}
     body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f5f7fa; color: #2c3e50; }}
@@ -189,16 +236,18 @@ def generate_html(entries):
     .tab-btn:hover {{ color: #2980b9; }}
     .tab-panel {{ display: none; padding: 2rem; max-width: 1100px; margin: 0 auto; }}
     .tab-panel.active {{ display: block; }}
-    .date-header {{ display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }}
-    .date-header h2 {{ font-size: 1.4rem; }}
-    .badge {{ background: #27ae60; color: #fff; font-size: 0.75rem; padding: 0.25rem 0.6rem; border-radius: 999px; font-weight: 600; }}
+    .date-header {{ display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 1.5rem; }}
+    .date-header h2 {{ font-size: 1.4rem; line-height: 1; }}
+    .badge {{ background: #27ae60; color: #fff; font-size: 0.7rem; padding: 0.2rem 0.55rem; border-radius: 999px; font-weight: 600; position: relative; top: -0.1em; }}
     .macro-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1rem; margin-bottom: 2rem; }}
     .macro-card {{ background: #fff; border-radius: 10px; padding: 1.25rem 1rem; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }}
     .macro-value {{ font-size: 2rem; font-weight: 700; line-height: 1; }}
     .macro-unit {{ font-size: 0.8rem; font-weight: 400; margin-left: 2px; color: #888; }}
     .macro-label {{ font-size: 0.8rem; color: #888; margin-top: 0.4rem; text-transform: uppercase; letter-spacing: 0.05em; }}
-    h3 {{ font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem; color: #555; text-transform: uppercase; letter-spacing: 0.05em; }}
     h2 {{ font-size: 1.4rem; margin-bottom: 1.5rem; }}
+    h3 {{ font-size: 0.85rem; font-weight: 600; color: #555; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.75rem; }}
+    .chart-section {{ background: #fff; border-radius: 10px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }}
+    .chart-wrap {{ position: relative; height: 280px; }}
     .table-wrap {{ overflow-x: auto; }}
     table {{ width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.08); font-size: 0.9rem; }}
     th {{ background: #f0f4f8; padding: 0.75rem 1rem; text-align: left; font-weight: 600; color: #555; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }}
@@ -229,6 +278,62 @@ def generate_html(entries):
   </div>
 
   <script>
+    const daily = {daily_json};
+    const monthly = {monthly_json};
+
+    const MACROS = [
+      {{ key: 'calories', label: 'Calories (kcal)', color: '#e67e22' }},
+      {{ key: 'protein',  label: 'Protein (g)',     color: '#2980b9' }},
+      {{ key: 'fat',      label: 'Fat (g)',          color: '#8e44ad' }},
+      {{ key: 'carbs',    label: 'Carbs (g)',        color: '#27ae60' }},
+      {{ key: 'fiber',    label: 'Fiber (g)',        color: '#16a085' }},
+    ];
+
+    function dataset(macro, data, type) {{
+      return {{
+        label: macro.label,
+        data: data[macro.key],
+        borderColor: macro.color,
+        backgroundColor: type === 'bar' ? macro.color + 'cc' : macro.color + '22',
+        borderWidth: type === 'bar' ? 0 : 2,
+        pointRadius: data.labels.length < 30 ? 4 : 2,
+        tension: 0.3,
+        fill: type === 'line',
+      }};
+    }}
+
+    const sharedOptions = (yLabel) => ({{
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: {{ mode: 'index', intersect: false }},
+      plugins: {{
+        legend: {{ position: 'top', labels: {{ boxWidth: 12, font: {{ size: 12 }} }} }},
+        tooltip: {{ callbacks: {{ label: ctx => ` ${{ctx.dataset.label}}: ${{ctx.parsed.y}}` }} }},
+      }},
+      scales: {{
+        x: {{ grid: {{ color: '#f0f0f0' }}, ticks: {{ maxTicksLimit: 12, font: {{ size: 11 }} }} }},
+        y: {{ grid: {{ color: '#f0f0f0' }}, beginAtZero: true, title: {{ display: false }} }},
+      }},
+    }});
+
+    new Chart(document.getElementById('chartDaily'), {{
+      type: 'line',
+      data: {{
+        labels: daily.labels,
+        datasets: MACROS.map(m => dataset(m, daily, 'line')),
+      }},
+      options: sharedOptions('Value'),
+    }});
+
+    new Chart(document.getElementById('chartMonthly'), {{
+      type: 'bar',
+      data: {{
+        labels: monthly.labels,
+        datasets: MACROS.map(m => dataset(m, monthly, 'bar')),
+      }},
+      options: {{ ...sharedOptions('Avg value'), plugins: {{ ...sharedOptions().plugins, tooltip: {{ callbacks: {{ label: ctx => ` ${{ctx.dataset.label}}: ${{ctx.parsed.y}} avg` }} }} }} }},
+    }});
+
     function showTab(name, btn) {{
       document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
       document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
