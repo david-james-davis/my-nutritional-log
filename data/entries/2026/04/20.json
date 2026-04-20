@@ -10,12 +10,12 @@
     "fiber": 2.0
   },
   "lunch": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "Sandwich with Hero seeded bread, black forest ham, mayonnaise, sweet onion, pickles",
+    "calories": 280,
+    "fat": 17.4,
+    "protein": 20.1,
+    "carbohydrates": 28.3,
+    "fiber": 24.0
   },
   "dinner": {
     "mealName": "",
@@ -35,12 +35,12 @@
       "fiber": 5.0
     }
   ],
-  "updatedAt": "2026-04-20T18:14:00Z",
+  "updatedAt": "2026-04-20T18:32:00Z",
   "dailyTotal": {
-    "calories": 543,
-    "fat": 26.2,
-    "protein": 26.6,
-    "carbohydrates": 49.7,
-    "fiber": 7.0
+    "calories": 823,
+    "fat": 43.6,
+    "protein": 46.7,
+    "carbohydrates": 78.0,
+    "fiber": 31.0
   }
 }
