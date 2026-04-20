@@ -3,6 +3,7 @@
 
 import json
 from collections import defaultdict
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
@@ -22,6 +23,16 @@ def load_all_entries():
             pass
     entries.sort(key=lambda e: e["date"])
     return entries
+
+
+def load_featured_entry(entries):
+    """Return (entry, is_today). Prefers today's file by path; falls back to most recent."""
+    today = date.today()
+    today_path = ENTRIES_DIR / str(today.year) / f"{today.month:02d}" / f"{today.day:02d}.json"
+    if today_path.exists():
+        with open(today_path) as f:
+            return json.load(f), True
+    return entries[-1], False
 
 
 def fmt_num(val, unit="g"):
@@ -54,16 +65,25 @@ def macro_card(label, value, unit, color):
         </div>"""
 
 
+GOALS = {
+    "calories": 2487.1,
+    "protein": 167.2,
+    "fat": 83.0,
+    "carbs": 268.0,
+}
+
+MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+               "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+
 def build_chart_data(entries):
-    """Return JSON-serialisable dicts for daily and monthly charts."""
-    daily = {
-        "labels": [],
-        "calories": [],
-        "protein": [],
-        "fat": [],
-        "carbs": [],
-        "fiber": [],
-    }
+    """Return (current_month, monthly) JSON-serialisable dicts for charts."""
+    today = date.today()
+    current_month_key = f"{today.year}-{today.month:02d}"
+    current_month_label = f"{MONTH_NAMES[today.month - 1]} {today.year}"
+
+    current_month = {"label": current_month_label, "labels": [],
+                     "calories": [], "protein": [], "fat": [], "carbs": [], "fiber": []}
     monthly_buckets = defaultdict(lambda: defaultdict(list))
 
     for e in entries:
@@ -75,38 +95,36 @@ def build_chart_data(entries):
         carbs = total.get("carbohydrates", 0)
         fiber = total.get("fiber", 0)
 
-        daily["labels"].append(dt)
-        daily["calories"].append(cals)
-        daily["protein"].append(protein)
-        daily["fat"].append(fat)
-        daily["carbs"].append(carbs)
-        daily["fiber"].append(fiber)
-
-        # e.g. "2026-04" → human label "Apr 2026"
         year, month, *_ = dt.split("-")
         month_key = f"{year}-{month}"
+
+        if month_key == current_month_key:
+            current_month["labels"].append(dt)
+            current_month["calories"].append(cals)
+            current_month["protein"].append(protein)
+            current_month["fat"].append(fat)
+            current_month["carbs"].append(carbs)
+            current_month["fiber"].append(fiber)
+
         monthly_buckets[month_key]["calories"].append(cals)
         monthly_buckets[month_key]["protein"].append(protein)
         monthly_buckets[month_key]["fat"].append(fat)
         monthly_buckets[month_key]["carbs"].append(carbs)
         monthly_buckets[month_key]["fiber"].append(fiber)
 
-    month_names = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-                   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-
     monthly = {"labels": [], "calories": [], "protein": [], "fat": [], "carbs": [], "fiber": []}
     for key in sorted(monthly_buckets):
         year, month = key.split("-")
-        monthly["labels"].append(f"{month_names[int(month)-1]} {year}")
+        monthly["labels"].append(f"{MONTH_NAMES[int(month)-1]} {year}")
         bucket = monthly_buckets[key]
         for macro in ("calories", "protein", "fat", "carbs", "fiber"):
             vals = bucket[macro]
             monthly[macro].append(round(sum(vals) / len(vals), 1))
 
-    return daily, monthly
+    return current_month, monthly
 
 
-def render_today_tab(entry):
+def render_today_tab(entry, is_today):
     dt = entry["date"]
     total = entry.get("dailyTotal", {})
     cals = total.get("calories", 0)
@@ -127,7 +145,7 @@ def render_today_tab(entry):
     return f"""
       <div class="date-header">
         <h2>{dt}</h2>
-        <span class="badge">Latest Entry</span>
+        {'<span class="badge">Today</span>' if is_today else f'<span class="badge badge-stale">Last logged: {dt}</span>'}
       </div>
       <div class="macro-grid">
         {macro_card("Calories", cals, "kcal", "#e67e22")}
@@ -185,8 +203,8 @@ def render_history_tab(entries):
       <h2>Historical Data</h2>
 
       <div class="chart-section">
-        <h3>Daily Trends</h3>
-        <div class="chart-wrap"><canvas id="chartDaily"></canvas></div>
+        <h3>Daily Trends — <span id="chartDailyMonth"></span></h3>
+        <div class="chart-wrap" style="height:320px"><canvas id="chartDaily"></canvas></div>
       </div>
 
       <div class="chart-section">
@@ -209,13 +227,14 @@ def render_history_tab(entries):
 
 
 def generate_html(entries):
-    latest = entries[-1]
-    today_content = render_today_tab(latest)
+    featured, is_today = load_featured_entry(entries)
+    today_content = render_today_tab(featured, is_today)
     history_content = render_history_tab(entries)
-    daily, monthly = build_chart_data(entries)
+    current_month, monthly = build_chart_data(entries)
 
-    daily_json = json.dumps(daily)
+    current_month_json = json.dumps(current_month)
     monthly_json = json.dumps(monthly)
+    goals_json = json.dumps(GOALS)
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -239,6 +258,7 @@ def generate_html(entries):
     .date-header {{ display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 1.5rem; }}
     .date-header h2 {{ font-size: 1.4rem; line-height: 1; }}
     .badge {{ background: #27ae60; color: #fff; font-size: 0.7rem; padding: 0.2rem 0.55rem; border-radius: 999px; font-weight: 600; position: relative; top: -0.1em; }}
+    .badge-stale {{ background: #e67e22; }}
     .macro-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1rem; margin-bottom: 2rem; }}
     .macro-card {{ background: #fff; border-radius: 10px; padding: 1.25rem 1rem; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }}
     .macro-value {{ font-size: 2rem; font-weight: 700; line-height: 1; }}
@@ -278,10 +298,110 @@ def generate_html(entries):
   </div>
 
   <script>
-    const daily = {daily_json};
+    const currentMonth = {current_month_json};
     const monthly = {monthly_json};
+    const GOALS = {goals_json};
 
     const MACROS = [
+      {{ key: 'calories', label: 'Calories', unit: 'kcal', color: '#e67e22', axis: 'y'  }},
+      {{ key: 'protein',  label: 'Protein',  unit: 'g',    color: '#2980b9', axis: 'y1' }},
+      {{ key: 'fat',      label: 'Fat',      unit: 'g',    color: '#8e44ad', axis: 'y1' }},
+      {{ key: 'carbs',    label: 'Carbs',    unit: 'g',    color: '#27ae60', axis: 'y1' }},
+      {{ key: 'fiber',    label: 'Fiber',    unit: 'g',    color: '#16a085', axis: 'y1' }},
+    ];
+
+    function actualDataset(macro, data) {{
+      const n = data.labels.length;
+      return {{
+        label: `${{macro.label}} (${{macro.unit}})`,
+        data: data[macro.key],
+        borderColor: macro.color,
+        backgroundColor: macro.color + '18',
+        borderWidth: 2,
+        pointRadius: n <= 15 ? 4 : 2,
+        pointHoverRadius: 6,
+        tension: 0.35,
+        fill: false,
+        yAxisID: macro.axis,
+      }};
+    }}
+
+    function goalDataset(macro, n) {{
+      if (!(macro.key in GOALS)) return null;
+      return {{
+        label: `${{macro.label}} goal (${{GOALS[macro.key]}}${{macro.unit}})`,
+        data: Array(n).fill(GOALS[macro.key]),
+        borderColor: macro.color,
+        backgroundColor: 'transparent',
+        borderWidth: 1.5,
+        borderDash: [6, 4],
+        pointRadius: 0,
+        pointHoverRadius: 0,
+        tension: 0,
+        fill: false,
+        yAxisID: macro.axis,
+      }};
+    }}
+
+    document.getElementById('chartDailyMonth').textContent = currentMonth.label;
+
+    const n = currentMonth.labels.length;
+    const dailyDatasets = [];
+    for (const m of MACROS) {{
+      dailyDatasets.push(actualDataset(m, currentMonth));
+      const g = goalDataset(m, n);
+      if (g) dailyDatasets.push(g);
+    }}
+
+    new Chart(document.getElementById('chartDaily'), {{
+      type: 'line',
+      data: {{ labels: currentMonth.labels, datasets: dailyDatasets }},
+      options: {{
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: {{ mode: 'index', intersect: false }},
+        plugins: {{
+          legend: {{
+            position: 'top',
+            labels: {{
+              boxWidth: 20,
+              font: {{ size: 11 }},
+              generateLabels(chart) {{
+                return Chart.defaults.plugins.legend.labels.generateLabels(chart).map(item => {{
+                  if (chart.data.datasets[item.datasetIndex].borderDash) {{
+                    item.lineDash = [6, 4];
+                  }}
+                  return item;
+                }});
+              }},
+            }},
+          }},
+          tooltip: {{
+            callbacks: {{
+              label: ctx => ` ${{ctx.dataset.label}}: ${{ctx.parsed.y}}`,
+            }},
+          }},
+        }},
+        scales: {{
+          x: {{ grid: {{ color: '#f0f0f0' }}, ticks: {{ font: {{ size: 11 }} }} }},
+          y: {{
+            position: 'left',
+            grid: {{ color: '#f0f0f0' }},
+            beginAtZero: false,
+            title: {{ display: true, text: 'Calories (kcal)', font: {{ size: 11 }}, color: '#e67e22' }},
+          }},
+          y1: {{
+            position: 'right',
+            grid: {{ drawOnChartArea: false }},
+            beginAtZero: true,
+            title: {{ display: true, text: 'Grams (g)', font: {{ size: 11 }}, color: '#555' }},
+          }},
+        }},
+      }},
+    }});
+
+    // Monthly averages bar chart
+    const MACROS_BAR = [
       {{ key: 'calories', label: 'Calories (kcal)', color: '#e67e22' }},
       {{ key: 'protein',  label: 'Protein (g)',     color: '#2980b9' }},
       {{ key: 'fat',      label: 'Fat (g)',          color: '#8e44ad' }},
@@ -289,49 +409,31 @@ def generate_html(entries):
       {{ key: 'fiber',    label: 'Fiber (g)',        color: '#16a085' }},
     ];
 
-    function dataset(macro, data, type) {{
-      return {{
-        label: macro.label,
-        data: data[macro.key],
-        borderColor: macro.color,
-        backgroundColor: type === 'bar' ? macro.color + 'cc' : macro.color + '22',
-        borderWidth: type === 'bar' ? 0 : 2,
-        pointRadius: data.labels.length < 30 ? 4 : 2,
-        tension: 0.3,
-        fill: type === 'line',
-      }};
-    }}
-
-    const sharedOptions = (yLabel) => ({{
-      responsive: true,
-      maintainAspectRatio: false,
-      interaction: {{ mode: 'index', intersect: false }},
-      plugins: {{
-        legend: {{ position: 'top', labels: {{ boxWidth: 12, font: {{ size: 12 }} }} }},
-        tooltip: {{ callbacks: {{ label: ctx => ` ${{ctx.dataset.label}}: ${{ctx.parsed.y}}` }} }},
-      }},
-      scales: {{
-        x: {{ grid: {{ color: '#f0f0f0' }}, ticks: {{ maxTicksLimit: 12, font: {{ size: 11 }} }} }},
-        y: {{ grid: {{ color: '#f0f0f0' }}, beginAtZero: true, title: {{ display: false }} }},
-      }},
-    }});
-
-    new Chart(document.getElementById('chartDaily'), {{
-      type: 'line',
-      data: {{
-        labels: daily.labels,
-        datasets: MACROS.map(m => dataset(m, daily, 'line')),
-      }},
-      options: sharedOptions('Value'),
-    }});
-
     new Chart(document.getElementById('chartMonthly'), {{
       type: 'bar',
       data: {{
         labels: monthly.labels,
-        datasets: MACROS.map(m => dataset(m, monthly, 'bar')),
+        datasets: MACROS_BAR.map(m => ({{
+          label: m.label,
+          data: monthly[m.key],
+          backgroundColor: m.color + 'cc',
+          borderWidth: 0,
+          borderRadius: 4,
+        }})),
       }},
-      options: {{ ...sharedOptions('Avg value'), plugins: {{ ...sharedOptions().plugins, tooltip: {{ callbacks: {{ label: ctx => ` ${{ctx.dataset.label}}: ${{ctx.parsed.y}} avg` }} }} }} }},
+      options: {{
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: {{ mode: 'index', intersect: false }},
+        plugins: {{
+          legend: {{ position: 'top', labels: {{ boxWidth: 12, font: {{ size: 11 }} }} }},
+          tooltip: {{ callbacks: {{ label: ctx => ` ${{ctx.dataset.label}}: ${{ctx.parsed.y}} avg` }} }},
+        }},
+        scales: {{
+          x: {{ grid: {{ color: '#f0f0f0' }}, ticks: {{ font: {{ size: 11 }} }} }},
+          y: {{ grid: {{ color: '#f0f0f0' }}, beginAtZero: true }},
+        }},
+      }},
     }});
 
     function showTab(name, btn) {{
