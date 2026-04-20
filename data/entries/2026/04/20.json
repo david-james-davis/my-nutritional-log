@@ -35,5 +35,12 @@
       "fiber": 5.0
     }
   ],
-  "updatedAt": "2026-04-20T18:08:00Z"
+  "updatedAt": "2026-04-20T18:14:00Z",
+  "dailyTotal": {
+    "calories": 543,
+    "fat": 26.2,
+    "protein": 26.6,
+    "carbohydrates": 49.7,
+    "fiber": 7.0
+  }
 }
