@@ -155,6 +155,11 @@ def render_today_tab(entry, is_today):
         {macro_card("Fiber", fiber, "g", "#16a085")}
       </div>
 
+      <div class="chart-section">
+        <h3>Progress Toward Daily Goals</h3>
+        <div class="chart-wrap" style="height:200px"><canvas id="chartGoals"></canvas></div>
+      </div>
+
       <h3>Meals</h3>
       <div class="table-wrap">
         <table>
@@ -236,6 +241,14 @@ def generate_html(entries):
     monthly_json = json.dumps(monthly)
     goals_json = json.dumps(GOALS)
 
+    ft = featured.get("dailyTotal", {})
+    featured_totals_json = json.dumps({
+        "calories": ft.get("calories", 0),
+        "protein":  ft.get("protein", 0),
+        "fat":      ft.get("fat", 0),
+        "carbs":    ft.get("carbohydrates", 0),
+    })
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -298,6 +311,7 @@ def generate_html(entries):
   </div>
 
   <script>
+    const featuredTotals = {featured_totals_json};
     const currentMonth = {current_month_json};
     const monthly = {monthly_json};
     const GOALS = {goals_json};
@@ -432,6 +446,85 @@ def generate_html(entries):
         scales: {{
           x: {{ grid: {{ color: '#f0f0f0' }}, ticks: {{ font: {{ size: 11 }} }} }},
           y: {{ grid: {{ color: '#f0f0f0' }}, beginAtZero: true }},
+        }},
+      }},
+    }});
+
+    // Goal progress chart (Today tab)
+    const goalItems = [
+      {{ key: 'calories', label: 'Calories', unit: 'kcal', color: '#e67e22' }},
+      {{ key: 'protein',  label: 'Protein',  unit: 'g',    color: '#2980b9' }},
+      {{ key: 'fat',      label: 'Fat',      unit: 'g',    color: '#8e44ad' }},
+      {{ key: 'carbs',    label: 'Carbs',    unit: 'g',    color: '#27ae60' }},
+    ];
+
+    const goalLinePlugin = {{
+      id: 'goalLine',
+      afterDraw(chart) {{
+        const {{ ctx, scales: {{ x, y }} }} = chart;
+        const xPx = x.getPixelForValue(100);
+        ctx.save();
+        ctx.beginPath();
+        ctx.moveTo(xPx, y.top);
+        ctx.lineTo(xPx, y.bottom);
+        ctx.strokeStyle = '#e74c3c';
+        ctx.lineWidth = 2;
+        ctx.setLineDash([5, 4]);
+        ctx.stroke();
+        ctx.font = '11px system-ui';
+        ctx.fillStyle = '#e74c3c';
+        ctx.textAlign = 'center';
+        ctx.fillText('Goal', xPx, y.top - 6);
+        ctx.restore();
+      }},
+    }};
+
+    new Chart(document.getElementById('chartGoals'), {{
+      type: 'bar',
+      plugins: [goalLinePlugin],
+      data: {{
+        labels: goalItems.map(m => m.label),
+        datasets: [{{
+          data: goalItems.map(m => {{
+            const goal = GOALS[m.key];
+            return goal ? Math.round((featuredTotals[m.key] / goal) * 1000) / 10 : 0;
+          }}),
+          backgroundColor: goalItems.map(m => {{
+            const pct = featuredTotals[m.key] / GOALS[m.key] * 100;
+            return pct > 100 ? '#e74c3ccc' : m.color + 'cc';
+          }}),
+          borderRadius: 4,
+          borderSkipped: false,
+        }}],
+      }},
+      options: {{
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {{
+          legend: {{ display: false }},
+          tooltip: {{
+            callbacks: {{
+              label: ctx => {{
+                const m = goalItems[ctx.dataIndex];
+                const actual = featuredTotals[m.key];
+                const goal = GOALS[m.key];
+                return ` ${{actual}}${{m.unit}} of ${{goal}}${{m.unit}} (${{ctx.parsed.x}}%)`;
+              }},
+            }},
+          }},
+        }},
+        scales: {{
+          x: {{
+            min: 0,
+            max: 130,
+            grid: {{ color: '#f0f0f0' }},
+            ticks: {{ callback: v => v + '%', font: {{ size: 11 }} }},
+          }},
+          y: {{
+            grid: {{ display: false }},
+            ticks: {{ font: {{ size: 12 }}, color: '#444' }},
+          }},
         }},
       }},
     }});
