@@ -4,6 +4,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * *'  # 11 PM PT (UTC-7) nightly
 
 permissions:
   contents: read
