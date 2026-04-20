@@ -25,6 +25,15 @@
     "carbohydrates": 0,
     "fiber": 0
   },
-  "snacks": [],
-  "updatedAt": "2026-04-20T17:33:00Z"
+  "snacks": [
+    {
+      "mealName": "Large Fuji apple",
+      "calories": 149,
+      "fat": 0.5,
+      "protein": 0.4,
+      "carbohydrates": 35.8,
+      "fiber": 5.0
+    }
+  ],
+  "updatedAt": "2026-04-20T18:08:00Z"
 }
