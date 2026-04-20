@@ -371,7 +371,7 @@ def generate_html(entries):
         ctx.font = '11px system-ui';
         ctx.fillStyle = '#e74c3c';
         ctx.textAlign = 'center';
-        ctx.fillText('Goal', xPx, y.top - 6);
+        ctx.fillText('Goal', xPx, y.top + 14);
         ctx.restore();
       }},
     }};
