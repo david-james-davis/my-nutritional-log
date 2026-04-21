@@ -25,14 +25,31 @@
     "carbohydrates": 0,
     "fiber": 0
   },
-  "snacks": [],
-  "updatedAt": "2026-04-21T16:16:26Z",
+  "snacks": [
+    {
+      "mealName": "Large Fuji apple",
+      "calories": 149,
+      "fat": 0.5,
+      "protein": 0.4,
+      "carbohydrates": 35.8,
+      "fiber": 5.0
+    },
+    {
+      "mealName": "About 12 mixed nuts",
+      "calories": 86,
+      "fat": 7.7,
+      "protein": 2.7,
+      "carbohydrates": 3.0,
+      "fiber": 1.5
+    }
+  ],
+  "updatedAt": "2026-04-21T17:43:34Z",
   "dailyTotal": {
-    "calories": 549,
-    "fat": 33.8,
-    "protein": 48.2,
-    "carbohydrates": 13.9,
-    "fiber": 2.0
+    "calories": 784,
+    "fat": 42.0,
+    "protein": 51.3,
+    "carbohydrates": 52.7,
+    "fiber": 8.5
   },
   "exercise": [
     {
