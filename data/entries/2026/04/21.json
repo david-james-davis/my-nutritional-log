@@ -41,15 +41,23 @@
       "protein": 2.7,
       "carbohydrates": 3.0,
       "fiber": 1.5
+    },
+    {
+      "mealName": "Protein shake with one banana",
+      "calories": 225,
+      "fat": 1.9,
+      "protein": 31.3,
+      "carbohydrates": 29.0,
+      "fiber": 3.1
     }
   ],
-  "updatedAt": "2026-04-21T17:43:34Z",
+  "updatedAt": "2026-04-21T17:54:18Z",
   "dailyTotal": {
-    "calories": 784,
-    "fat": 42.0,
-    "protein": 51.3,
-    "carbohydrates": 52.7,
-    "fiber": 8.5
+    "calories": 1009,
+    "fat": 43.9,
+    "protein": 82.6,
+    "carbohydrates": 81.7,
+    "fiber": 11.6
   },
   "exercise": [
     {
