@@ -2,6 +2,8 @@
 """Generate a static GitHub Pages site from nutritional log JSON entries."""
 
 import json
+import struct
+import zlib
 from collections import defaultdict
 from datetime import date
 from pathlib import Path
@@ -304,6 +306,12 @@ def generate_html(entries):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>David's Nutritional Log</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2c3e50">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Nutrition Log">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
   <style>
     *, *::before, *::after {{ box-sizing: border-box; margin: 0; padding: 0; }}
@@ -342,7 +350,16 @@ def generate_html(entries):
     .water-icon {{ font-size: 1.5rem; color: #3498db; font-weight: 700; }}
     .water-title {{ font-size: 0.75rem; font-weight: 600; color: #555; text-transform: uppercase; letter-spacing: 0.06em; }}
     .water-status {{ font-size: 1rem; font-weight: 600; color: #2c3e50; margin-top: 0.2rem; }}
-    .water-bar-track {{ height: 6px; background: #e0f0fb; border-radius: 999px; margin-top: 0.5rem; width: 200px; }}
+    .water-bar-track {{ height: 6px; background: #e0f0fb; border-radius: 999px; margin-top: 0.5rem; width: min(200px, 100%); }}
+    @media (max-width: 600px) {{
+      header {{ padding: 1rem; }}
+      .tabs {{ padding: 0; overflow-x: auto; }}
+      .tab-btn {{ padding: 0.75rem 1rem; font-size: 0.85rem; white-space: nowrap; }}
+      .tab-panel {{ padding: 1rem; }}
+      .macro-value {{ font-size: 1.5rem; }}
+      .chart-wrap {{ height: 220px !important; }}
+      .water-card {{ flex-direction: column; align-items: flex-start; gap: 0.5rem; }}
+    }}
     .water-bar-fill {{ height: 100%; background: #3498db; border-radius: 999px; }}
   </style>
 </head>
@@ -536,9 +553,67 @@ def generate_html(entries):
       document.getElementById('tab-' + name).classList.add('active');
       btn.classList.add('active');
     }}
+
+    if ('serviceWorker' in navigator) {{
+      navigator.serviceWorker.register('./sw.js');
+    }}
   </script>
 </body>
 </html>"""
+
+
+def make_icon_png(size, color="#2c3e50"):
+    r, g, b = int(color[1:3], 16), int(color[3:5], 16), int(color[5:7], 16)
+    raw = b"".join(b"\x00" + bytes([r, g, b] * size) for _ in range(size))
+
+    def chunk(tag, data):
+        return struct.pack(">I", len(data)) + tag + data + struct.pack(">I", zlib.crc32(tag + data) & 0xFFFFFFFF)
+
+    return (
+        b"\x89PNG\r\n\x1a\n"
+        + chunk(b"IHDR", struct.pack(">IIBBBBB", size, size, 8, 2, 0, 0, 0))
+        + chunk(b"IDAT", zlib.compress(raw, 9))
+        + chunk(b"IEND", b"")
+    )
+
+
+def make_manifest():
+    return json.dumps({
+        "name": "David's Nutritional Log",
+        "short_name": "Nutrition Log",
+        "description": "Personal daily nutrition and exercise tracker",
+        "start_url": "./",
+        "display": "standalone",
+        "background_color": "#f5f7fa",
+        "theme_color": "#2c3e50",
+        "icons": [
+            {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+            {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"},
+        ],
+    }, indent=2)
+
+
+def make_sw():
+    return """\
+const CACHE = 'nutritional-log-v1';
+const ASSETS = ['./', './index.html'];
+
+self.addEventListener('install', e => {
+  e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)));
+  self.skipWaiting();
+});
+
+self.addEventListener('activate', e => {
+  e.waitUntil(caches.keys().then(keys =>
+    Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))
+  ));
+  self.clients.claim();
+});
+
+self.addEventListener('fetch', e => {
+  e.respondWith(caches.match(e.request).then(r => r || fetch(e.request)));
+});
+"""
 
 
 def main():
@@ -547,6 +622,15 @@ def main():
         raise SystemExit("No entries found in data/entries/")
 
     OUTPUT_DIR.mkdir(exist_ok=True)
+
+    # PWA assets
+    icons_dir = OUTPUT_DIR / "icons"
+    icons_dir.mkdir(exist_ok=True)
+    (icons_dir / "icon-192.png").write_bytes(make_icon_png(192))
+    (icons_dir / "icon-512.png").write_bytes(make_icon_png(512))
+    (OUTPUT_DIR / "manifest.json").write_text(make_manifest())
+    (OUTPUT_DIR / "sw.js").write_text(make_sw())
+
     html = generate_html(entries)
     output_file = OUTPUT_DIR / "index.html"
     output_file.write_text(html)
