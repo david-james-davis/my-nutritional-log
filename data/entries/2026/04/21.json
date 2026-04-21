@@ -26,12 +26,22 @@
     "fiber": 0
   },
   "snacks": [],
-  "updatedAt": "2026-04-21T15:38:20Z",
+  "updatedAt": "2026-04-21T16:16:26Z",
   "dailyTotal": {
     "calories": 549,
     "fat": 33.8,
     "protein": 48.2,
     "carbohydrates": 13.9,
     "fiber": 2.0
+  },
+  "exercise": [
+    {
+      "activity": "brisk walking",
+      "durationMinutes": 30,
+      "caloriesBurned": 165
+    }
+  ],
+  "exerciseTotal": {
+    "caloriesBurned": 165
   }
 }
