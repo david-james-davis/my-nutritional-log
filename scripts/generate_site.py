@@ -78,16 +78,35 @@ MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
 
 def build_chart_data(entries):
     """Return all_days dict for the history line chart."""
-    all_days = {"labels": [], "calories": [], "protein": [], "fat": [], "carbs": [], "fiber": []}
+    all_days = {"labels": [], "calories": [], "protein": [], "fat": [], "carbs": [], "fiber": [], "burned": [], "net": []}
     for e in entries:
         total = e.get("dailyTotal", {})
+        cals = total.get("calories", 0)
+        burned = e.get("exerciseTotal", {}).get("caloriesBurned", 0)
         all_days["labels"].append(e["date"])
-        all_days["calories"].append(total.get("calories", 0))
+        all_days["calories"].append(cals)
         all_days["protein"].append(total.get("protein", 0))
         all_days["fat"].append(total.get("fat", 0))
         all_days["carbs"].append(total.get("carbohydrates", 0))
         all_days["fiber"].append(total.get("fiber", 0))
+        all_days["burned"].append(burned)
+        all_days["net"].append(cals - burned)
     return all_days
+
+
+def exercise_rows(activities):
+    rows = ""
+    for a in activities:
+        name = a.get("activity", "")
+        if not name:
+            continue
+        rows += f"""
+        <tr>
+          <td class="meal-label">{name.title()}</td>
+          <td>{a.get('durationMinutes', 0)} min</td>
+          <td>{fmt_num(a.get('caloriesBurned', 0), 'kcal')}</td>
+        </tr>"""
+    return rows
 
 
 def render_today_tab(entry, is_today):
@@ -99,6 +118,10 @@ def render_today_tab(entry, is_today):
     carbs = total.get("carbohydrates", 0)
     fiber = total.get("fiber", 0)
 
+    activities = entry.get("exercise", [])
+    burned = entry.get("exerciseTotal", {}).get("caloriesBurned", 0)
+    net = cals - burned
+
     meal_rows = ""
     for label, key in [("Breakfast", "breakfast"), ("Lunch", "lunch"), ("Dinner", "dinner")]:
         meal = entry.get(key, {})
@@ -108,17 +131,39 @@ def render_today_tab(entry, is_today):
         label = "Snack" if len(entry.get("snacks", [])) == 1 else f"Snack {i}"
         meal_rows += meal_row(label, snack)
 
+    net_color = "#27ae60" if net <= GOALS["calories"] else "#e74c3c"
+    exercise_section = ""
+    if activities:
+        ex_rows = exercise_rows(activities)
+        exercise_section = f"""
+      <h3>Exercise</h3>
+      <div class="table-wrap" style="margin-bottom:1.5rem">
+        <table>
+          <thead>
+            <tr><th>Activity</th><th>Duration</th><th>Calories Burned</th></tr>
+          </thead>
+          <tbody>
+            {ex_rows}
+            <tr class="total-row">
+              <td colspan="2"><strong>Total Burned</strong></td>
+              <td><strong>{fmt_num(burned, 'kcal')}</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>"""
+
     return f"""
       <div class="date-header">
         <h2>{dt}</h2>
         {'<span class="badge">Today</span>' if is_today else f'<span class="badge badge-stale">Last logged: {dt}</span>'}
       </div>
       <div class="macro-grid">
-        {macro_card("Calories", cals, "kcal", "#e67e22")}
+        {macro_card("Calories In", cals, "kcal", "#e67e22")}
         {macro_card("Protein", protein, "g", "#2980b9")}
         {macro_card("Fat", fat, "g", "#8e44ad")}
         {macro_card("Carbs", carbs, "g", "#27ae60")}
         {macro_card("Fiber", fiber, "g", "#16a085")}
+        {macro_card("Net Calories", net, "kcal", net_color)}
       </div>
 
       <div class="chart-section">
@@ -127,7 +172,7 @@ def render_today_tab(entry, is_today):
       </div>
 
       <h3>Meals</h3>
-      <div class="table-wrap">
+      <div class="table-wrap" style="margin-bottom:1.5rem">
         <table>
           <thead>
             <tr>
@@ -147,7 +192,8 @@ def render_today_tab(entry, is_today):
             </tr>
           </tbody>
         </table>
-      </div>"""
+      </div>
+      {exercise_section}"""
 
 
 def render_history_tab(entries):
@@ -160,10 +206,14 @@ def render_history_tab(entries):
         fat = total.get("fat", 0)
         carbs = total.get("carbohydrates", 0)
         fiber = total.get("fiber", 0)
+        burned = e.get("exerciseTotal", {}).get("caloriesBurned", 0)
+        net = cals - burned
         rows += f"""
           <tr>
             <td>{dt}</td>
             <td>{fmt_num(cals, 'kcal')}</td>
+            <td>{fmt_num(burned, 'kcal')}</td>
+            <td>{fmt_num(net, 'kcal')}</td>
             <td>{fmt_num(protein)}</td>
             <td>{fmt_num(fat)}</td>
             <td>{fmt_num(carbs)}</td>
@@ -183,8 +233,8 @@ def render_history_tab(entries):
         <table>
           <thead>
             <tr>
-              <th>Date</th><th>Calories</th><th>Protein</th>
-              <th>Fat</th><th>Carbs</th><th>Fiber</th>
+              <th>Date</th><th>Calories In</th><th>Burned</th><th>Net</th>
+              <th>Protein</th><th>Fat</th><th>Carbs</th><th>Fiber</th>
             </tr>
           </thead>
           <tbody>{rows}</tbody>
@@ -201,11 +251,14 @@ def generate_html(entries):
     goals_json = json.dumps(GOALS)
 
     ft = featured.get("dailyTotal", {})
+    burned = featured.get("exerciseTotal", {}).get("caloriesBurned", 0)
     featured_totals_json = json.dumps({
         "calories": ft.get("calories", 0),
         "protein":  ft.get("protein", 0),
         "fat":      ft.get("fat", 0),
         "carbs":    ft.get("carbohydrates", 0),
+        "burned":   burned,
+        "net":      ft.get("calories", 0) - burned,
     })
 
     return f"""<!DOCTYPE html>
@@ -326,12 +379,16 @@ def generate_html(entries):
               label: ctx => ` Calories: ${{ctx.parsed.y}} kcal`,
               afterBody: (items) => {{
                 const i = items[0].dataIndex;
-                return [
+                const lines = [
                   ` Protein: ${{allDays.protein[i]}}g`,
                   ` Fat: ${{allDays.fat[i]}}g`,
                   ` Carbs: ${{allDays.carbs[i]}}g`,
                   ` Fiber: ${{allDays.fiber[i]}}g`,
                 ];
+                if (allDays.burned[i]) {{
+                  lines.push(``, ` Burned: ${{allDays.burned[i]}} kcal`, ` Net: ${{allDays.net[i]}} kcal`);
+                }}
+                return lines;
               }},
             }},
           }},
@@ -349,10 +406,10 @@ def generate_html(entries):
 
     // Goal progress chart (Today tab)
     const goalItems = [
-      {{ key: 'calories', label: 'Calories', unit: 'kcal', color: '#e67e22' }},
-      {{ key: 'protein',  label: 'Protein',  unit: 'g',    color: '#2980b9' }},
-      {{ key: 'fat',      label: 'Fat',      unit: 'g',    color: '#8e44ad' }},
-      {{ key: 'carbs',    label: 'Carbs',    unit: 'g',    color: '#27ae60' }},
+      {{ key: 'net',     label: 'Net Calories', unit: 'kcal', color: '#e67e22' }},
+      {{ key: 'protein', label: 'Protein',       unit: 'g',    color: '#2980b9' }},
+      {{ key: 'fat',     label: 'Fat',           unit: 'g',    color: '#8e44ad' }},
+      {{ key: 'carbs',   label: 'Carbs',         unit: 'g',    color: '#27ae60' }},
     ];
 
     const goalLinePlugin = {{
@@ -405,8 +462,10 @@ def generate_html(entries):
               label: ctx => {{
                 const m = goalItems[ctx.dataIndex];
                 const actual = featuredTotals[m.key];
-                const goal = GOALS[m.key];
-                return ` ${{actual}}${{m.unit}} of ${{goal}}${{m.unit}} (${{ctx.parsed.x}}%)`;
+                const goalKey = m.key === 'net' ? 'calories' : m.key;
+                const goal = GOALS[goalKey];
+                const suffix = m.key === 'net' ? ` (in: ${{featuredTotals.calories}}, burned: ${{featuredTotals.burned}})` : '';
+                return ` ${{actual}}${{m.unit}} of ${{goal}}${{m.unit}} (${{ctx.parsed.x}}%)${{suffix}}`;
               }},
             }},
           }},

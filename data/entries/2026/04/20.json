@@ -35,6 +35,16 @@
       "fiber": 5.0
     }
   ],
+  "exercise": [
+    {
+      "activity": "brisk walking",
+      "durationMinutes": 35,
+      "caloriesBurned": 194
+    }
+  ],
+  "exerciseTotal": {
+    "caloriesBurned": 194
+  },
   "updatedAt": "2026-04-20T18:32:00Z",
   "dailyTotal": {
     "calories": 823,
