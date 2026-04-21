@@ -51,7 +51,7 @@
       "fiber": 3.1
     }
   ],
-  "updatedAt": "2026-04-21T19:12:57Z",
+  "updatedAt": "2026-04-21T19:18:12Z",
   "dailyTotal": {
     "calories": 1009,
     "fat": 43.9,
@@ -69,13 +69,5 @@
   "exerciseTotal": {
     "caloriesBurned": 165
   },
-  "water": [
-    {
-      "type": "water",
-      "ounces": 36
-    }
-  ],
-  "waterTotal": {
-    "ounces": 36
-  }
+  "waterOz": 36
 }
