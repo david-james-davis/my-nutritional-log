@@ -440,11 +440,13 @@ def generate_html(entries):
         labels: goalItems.map(m => m.label),
         datasets: [{{
           data: goalItems.map(m => {{
-            const goal = GOALS[m.key];
+            const goalKey = m.key === 'net' ? 'calories' : m.key;
+            const goal = GOALS[goalKey];
             return goal ? Math.round((featuredTotals[m.key] / goal) * 1000) / 10 : 0;
           }}),
           backgroundColor: goalItems.map(m => {{
-            const pct = featuredTotals[m.key] / GOALS[m.key] * 100;
+            const goalKey = m.key === 'net' ? 'calories' : m.key;
+            const pct = featuredTotals[m.key] / GOALS[goalKey] * 100;
             return pct > 100 ? '#e74c3ccc' : m.color + 'cc';
           }}),
           borderRadius: 4,
