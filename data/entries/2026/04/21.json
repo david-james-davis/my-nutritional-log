@@ -10,12 +10,12 @@
     "fiber": 2.0
   },
   "lunch": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "2 pork Italian sausages, half bell pepper, Caesar dressing, 8 raspberries, 5 dried Turkish apricots",
+    "calories": 737,
+    "fat": 52.8,
+    "protein": 32.3,
+    "carbohydrates": 36.2,
+    "fiber": 5.7
   },
   "dinner": {
     "mealName": "",
@@ -51,13 +51,13 @@
       "fiber": 3.1
     }
   ],
-  "updatedAt": "2026-04-21T17:54:18Z",
+  "updatedAt": "2026-04-21T21:47:03Z",
   "dailyTotal": {
-    "calories": 1009,
-    "fat": 43.9,
-    "protein": 82.6,
-    "carbohydrates": 81.7,
-    "fiber": 11.6
+    "calories": 1746,
+    "fat": 96.7,
+    "protein": 114.9,
+    "carbohydrates": 117.9,
+    "fiber": 17.3
   },
   "exercise": [
     {
@@ -68,5 +68,6 @@
   ],
   "exerciseTotal": {
     "caloriesBurned": 165
-  }
+  },
+  "waterOz": 66
 }
