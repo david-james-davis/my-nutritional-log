@@ -72,8 +72,18 @@ GOALS = {
     "carbs": 268.0,
 }
 
+WEIGHT_LBS = 209
+
 MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
                "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+
+def calc_water_oz(entry):
+    """Base 0.5 oz/lb + 16 oz per 30 min of exercise logged."""
+    base = WEIGHT_LBS * 0.5
+    total_minutes = sum(a.get("durationMinutes", 0) for a in entry.get("exercise", []))
+    bonus = (total_minutes / 30) * 16
+    return round(base + bonus)
 
 
 def build_chart_data(entries):
@@ -132,6 +142,31 @@ def render_today_tab(entry, is_today):
         meal_rows += meal_row(label, snack)
 
     net_color = "#27ae60" if net <= GOALS["calories"] else "#e74c3c"
+
+    recommended_oz = calc_water_oz(entry)
+    recommended_l = round(recommended_oz * 0.0296, 1)
+    logged_oz = entry.get("waterOz")
+    if logged_oz:
+        water_pct = min(round(logged_oz / recommended_oz * 100), 100)
+        water_status = f"{logged_oz} oz of {recommended_oz} oz ({water_pct}%)"
+        water_bar = f"""
+        <div class="water-bar-track">
+          <div class="water-bar-fill" style="width:{water_pct}%"></div>
+        </div>"""
+    else:
+        water_status = f"Target: {recommended_oz} oz ({recommended_l} L)"
+        water_bar = ""
+
+    water_card = f"""
+      <div class="water-card">
+        <span class="water-icon">~</span>
+        <div class="water-info">
+          <div class="water-title">Water Intake</div>
+          <div class="water-status">{water_status}</div>
+          {water_bar}
+        </div>
+      </div>"""
+
     exercise_section = ""
     if activities:
         ex_rows = exercise_rows(activities)
@@ -165,6 +200,8 @@ def render_today_tab(entry, is_today):
         {macro_card("Fiber", fiber, "g", "#16a085")}
         {macro_card("Net Calories", net, "kcal", net_color)}
       </div>
+
+      {water_card}
 
       <div class="chart-section">
         <h3>Progress Toward Daily Goals</h3>
@@ -301,6 +338,12 @@ def generate_html(entries):
     .meal-label {{ font-weight: 600; color: #555; white-space: nowrap; }}
     .meal-name {{ color: #444; max-width: 340px; }}
     .total-row td {{ background: #f7f9fc; font-weight: 600; border-top: 2px solid #e0e0e0; }}
+    .water-card {{ display: flex; align-items: center; gap: 1rem; background: #fff; border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.08); border-left: 4px solid #3498db; }}
+    .water-icon {{ font-size: 1.5rem; color: #3498db; font-weight: 700; }}
+    .water-title {{ font-size: 0.75rem; font-weight: 600; color: #555; text-transform: uppercase; letter-spacing: 0.06em; }}
+    .water-status {{ font-size: 1rem; font-weight: 600; color: #2c3e50; margin-top: 0.2rem; }}
+    .water-bar-track {{ height: 6px; background: #e0f0fb; border-radius: 999px; margin-top: 0.5rem; width: 200px; }}
+    .water-bar-fill {{ height: 100%; background: #3498db; border-radius: 999px; }}
   </style>
 </head>
 <body>
