@@ -200,7 +200,12 @@ def render_today_tab(entry, is_today):
         {macro_card("Fat", fat, "g", "#8e44ad")}
         {macro_card("Carbs", carbs, "g", "#27ae60")}
         {macro_card("Fiber", fiber, "g", "#16a085")}
-        {macro_card("Net Calories", net, "kcal", net_color)}
+        <div class="net-cal-card" style="background:{net_color}; color:#fff">
+          <div class="net-cal-label">Net Calories</div>
+          <div class="net-cal-value">{net:g}<span class="net-cal-unit">kcal</span></div>
+          <div class="net-cal-sub">{fmt_num(cals, 'kcal')} in &minus; {fmt_num(burned, 'kcal')} burned</div>
+        </div>
+
       </div>
 
       {water_card}
@@ -346,6 +351,11 @@ def generate_html(entries):
     .meal-label {{ font-weight: 600; color: #555; white-space: nowrap; }}
     .meal-name {{ color: #444; max-width: 340px; }}
     .total-row td {{ background: #f7f9fc; font-weight: 600; border-top: 2px solid #e0e0e0; }}
+    .net-cal-card {{ border-radius: 10px; padding: 1.25rem 1rem; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.12); }}
+    .net-cal-label {{ font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem; opacity: 0.85; }}
+    .net-cal-value {{ font-size: 2rem; font-weight: 800; line-height: 1; }}
+    .net-cal-unit {{ font-size: 0.8rem; font-weight: 400; margin-left: 2px; opacity: 0.75; }}
+    .net-cal-sub {{ font-size: 0.7rem; opacity: 0.7; margin-top: 0.35rem; }}
     .water-card {{ display: flex; align-items: center; gap: 1rem; background: #fff; border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.08); border-left: 4px solid #3498db; }}
     .water-icon {{ font-size: 1.5rem; color: #3498db; font-weight: 700; }}
     .water-title {{ font-size: 0.75rem; font-weight: 600; color: #555; text-transform: uppercase; letter-spacing: 0.06em; }}
