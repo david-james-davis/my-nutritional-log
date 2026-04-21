@@ -49,15 +49,23 @@
       "protein": 31.3,
       "carbohydrates": 29.0,
       "fiber": 3.1
+    },
+    {
+      "mealName": "25 Wilde brand protein chips",
+      "calories": 162,
+      "fat": 10,
+      "protein": 10,
+      "carbohydrates": 8,
+      "fiber": 2
     }
   ],
-  "updatedAt": "2026-04-21T21:47:03Z",
+  "updatedAt": "2026-04-21T22:16:40Z",
   "dailyTotal": {
-    "calories": 1746,
-    "fat": 96.7,
-    "protein": 114.9,
-    "carbohydrates": 117.9,
-    "fiber": 17.3
+    "calories": 1908,
+    "fat": 106.7,
+    "protein": 124.9,
+    "carbohydrates": 125.9,
+    "fiber": 19.3
   },
   "exercise": [
     {
