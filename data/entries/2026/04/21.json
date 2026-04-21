@@ -25,13 +25,48 @@
     "carbohydrates": 0,
     "fiber": 0
   },
-  "snacks": [],
-  "updatedAt": "2026-04-21T15:38:20Z",
+  "snacks": [
+    {
+      "mealName": "Large Fuji apple",
+      "calories": 149,
+      "fat": 0.5,
+      "protein": 0.4,
+      "carbohydrates": 35.8,
+      "fiber": 5.0
+    },
+    {
+      "mealName": "About 12 mixed nuts",
+      "calories": 86,
+      "fat": 7.7,
+      "protein": 2.7,
+      "carbohydrates": 3.0,
+      "fiber": 1.5
+    },
+    {
+      "mealName": "Protein shake with one banana",
+      "calories": 225,
+      "fat": 1.9,
+      "protein": 31.3,
+      "carbohydrates": 29.0,
+      "fiber": 3.1
+    }
+  ],
+  "updatedAt": "2026-04-21T17:54:18Z",
   "dailyTotal": {
-    "calories": 549,
-    "fat": 33.8,
-    "protein": 48.2,
-    "carbohydrates": 13.9,
-    "fiber": 2.0
+    "calories": 1009,
+    "fat": 43.9,
+    "protein": 82.6,
+    "carbohydrates": 81.7,
+    "fiber": 11.6
+  },
+  "exercise": [
+    {
+      "activity": "brisk walking",
+      "durationMinutes": 30,
+      "caloriesBurned": 165
+    }
+  ],
+  "exerciseTotal": {
+    "caloriesBurned": 165
   }
 }
