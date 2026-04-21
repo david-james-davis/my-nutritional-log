@@ -562,9 +562,36 @@ def generate_html(entries):
 </html>"""
 
 
-def make_icon_png(size, color="#2c3e50"):
-    r, g, b = int(color[1:3], 16), int(color[3:5], 16), int(color[5:7], 16)
-    raw = b"".join(b"\x00" + bytes([r, g, b] * size) for _ in range(size))
+def make_icon_png(size):
+    BG = (39, 174, 96)   # #27ae60 green
+    FG = (255, 255, 255)  # white
+
+    # 5-wide × 7-tall bitmap for the letter "D"
+    LETTER_D = [
+        [1, 1, 1, 1, 0],
+        [1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1],
+        [1, 1, 1, 1, 0],
+    ]
+
+    scale = size // 12
+    lw, lh = 5 * scale, 7 * scale
+    ox, oy = (size - lw) // 2, (size - lh) // 2
+
+    pixels = [[BG] * size for _ in range(size)]
+    for ri, row in enumerate(LETTER_D):
+        for ci, bit in enumerate(row):
+            if bit:
+                for dy in range(scale):
+                    for dx in range(scale):
+                        y, x = oy + ri * scale + dy, ox + ci * scale + dx
+                        if 0 <= y < size and 0 <= x < size:
+                            pixels[y][x] = FG
+
+    raw = b"".join(b"\x00" + b"".join(bytes(p) for p in row) for row in pixels)
 
     def chunk(tag, data):
         return struct.pack(">I", len(data)) + tag + data + struct.pack(">I", zlib.crc32(tag + data) & 0xFFFFFFFF)
