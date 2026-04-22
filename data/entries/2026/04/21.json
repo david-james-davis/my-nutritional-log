@@ -65,15 +65,23 @@
       "protein": 0.4,
       "carbohydrates": 18.0,
       "fiber": 1.6
+    },
+    {
+      "mealName": "Medium Fuji apple",
+      "calories": 95,
+      "fat": 0.3,
+      "protein": 0.4,
+      "carbohydrates": 25.0,
+      "fiber": 4.4
     }
   ],
-  "updatedAt": "2026-04-21T23:41:55Z",
+  "updatedAt": "2026-04-22T01:42:14Z",
   "dailyTotal": {
-    "calories": 2488,
-    "fat": 150.4,
-    "protein": 146.5,
-    "carbohydrates": 151.9,
-    "fiber": 22.4
+    "calories": 2583,
+    "fat": 150.7,
+    "protein": 146.9,
+    "carbohydrates": 176.9,
+    "fiber": 26.8
   },
   "exercise": [
     {
