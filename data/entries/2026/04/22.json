@@ -10,12 +10,12 @@
     "fiber": 2.0
   },
   "lunch": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "2 slices Hero brand bread, 1 tbsp mayonnaise, 5 slices ham, 1 large Fuji apple",
+    "calories": 429,
+    "fat": 17.9,
+    "protein": 20.5,
+    "carbohydrates": 64.1,
+    "fiber": 29.0
   },
   "dinner": {
     "mealName": "",
@@ -30,13 +30,13 @@
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-04-22T16:44:56Z",
+  "updatedAt": "2026-04-22T18:50:53Z",
   "dailyTotal": {
-    "calories": 655,
-    "fat": 45.3,
-    "protein": 45.2,
-    "carbohydrates": 15.6,
-    "fiber": 2.0
+    "calories": 1084,
+    "fat": 63.2,
+    "protein": 65.7,
+    "carbohydrates": 79.7,
+    "fiber": 31.0
   },
   "waterOz": 18
 }
