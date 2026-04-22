@@ -1,0 +1,42 @@
+{
+  "date": "2026-04-22",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "4 eggs scrambled, 2 slices colby cheese, 1/2 pork sausage, 1/2 medium sweet potato",
+    "calories": 655,
+    "fat": 45.3,
+    "protein": 45.2,
+    "carbohydrates": 15.6,
+    "fiber": 2.0
+  },
+  "lunch": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-04-22T16:44:56Z",
+  "dailyTotal": {
+    "calories": 655,
+    "fat": 45.3,
+    "protein": 45.2,
+    "carbohydrates": 15.6,
+    "fiber": 2.0
+  },
+  "waterOz": 18
+}
