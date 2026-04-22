@@ -18,11 +18,11 @@
     "fiber": 29.0
   },
   "dinner": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
+    "mealName": "2 pork Italian sausages, 1 hamburger patty",
+    "calories": 703,
+    "fat": 55,
+    "protein": 47,
+    "carbohydrates": 4,
     "fiber": 0
   },
   "snacks": [],
@@ -30,13 +30,13 @@
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-04-22T18:50:53Z",
+  "updatedAt": "2026-04-22T22:48:38Z",
   "dailyTotal": {
-    "calories": 1084,
-    "fat": 63.2,
-    "protein": 65.7,
-    "carbohydrates": 79.7,
+    "calories": 1787,
+    "fat": 118.2,
+    "protein": 112.7,
+    "carbohydrates": 83.7,
     "fiber": 31.0
   },
-  "waterOz": 18
+  "waterOz": 36
 }
