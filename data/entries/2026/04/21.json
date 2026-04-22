@@ -65,25 +65,46 @@
       "protein": 0.4,
       "carbohydrates": 18.0,
       "fiber": 1.6
+    },
+    {
+      "mealName": "Medium Fuji apple",
+      "calories": 95,
+      "fat": 0.3,
+      "protein": 0.4,
+      "carbohydrates": 25.0,
+      "fiber": 4.4
+    },
+    {
+      "mealName": "Protein shake",
+      "calories": 328,
+      "fat": 8,
+      "protein": 40,
+      "carbohydrates": 24,
+      "fiber": 8
     }
   ],
-  "updatedAt": "2026-04-21T23:41:55Z",
+  "updatedAt": "2026-04-22T03:41:40Z",
   "dailyTotal": {
-    "calories": 2488,
-    "fat": 150.4,
-    "protein": 146.5,
-    "carbohydrates": 151.9,
-    "fiber": 22.4
+    "calories": 2911,
+    "fat": 158.7,
+    "protein": 186.9,
+    "carbohydrates": 200.9,
+    "fiber": 34.8
   },
   "exercise": [
     {
       "activity": "brisk walking",
       "durationMinutes": 30,
       "caloriesBurned": 165
+    },
+    {
+      "activity": "kettlebell strength workout (3x10 swings, deadlifts, curls)",
+      "durationMinutes": 20,
+      "caloriesBurned": 165
     }
   ],
   "exerciseTotal": {
-    "caloriesBurned": 165
+    "caloriesBurned": 330
   },
-  "waterOz": 66
+  "waterOz": 114
 }
