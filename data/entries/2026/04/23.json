@@ -10,12 +10,12 @@
     "fiber": 15.1
   },
   "lunch": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "5 eggs scrambled, 2 slices colby cheese, 1/2 pork sausage, 5 dried Turkish apricots",
+    "calories": 760,
+    "fat": 46.5,
+    "protein": 52.0,
+    "carbohydrates": 24.0,
+    "fiber": 2.5
   },
   "dinner": {
     "mealName": "",
@@ -47,13 +47,13 @@
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-04-23T17:55:10Z",
+  "updatedAt": "2026-04-23T19:20:08Z",
   "dailyTotal": {
-    "calories": 917,
-    "fat": 28.6,
-    "protein": 67.9,
-    "carbohydrates": 98.4,
-    "fiber": 20.1
+    "calories": 1677,
+    "fat": 75.1,
+    "protein": 119.9,
+    "carbohydrates": 122.4,
+    "fiber": 22.6
   },
   "waterOz": 18
 }
