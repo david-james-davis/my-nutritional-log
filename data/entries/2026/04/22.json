@@ -33,17 +33,25 @@
       "protein": 40,
       "carbohydrates": 24,
       "fiber": 8
+    },
+    {
+      "mealName": "Chicken breast",
+      "calories": 280,
+      "fat": 6,
+      "protein": 53,
+      "carbohydrates": 0,
+      "fiber": 0
     }
   ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-04-23T01:09:40Z",
+  "updatedAt": "2026-04-23T02:05:39Z",
   "dailyTotal": {
-    "calories": 2115,
-    "fat": 126.2,
-    "protein": 152.7,
+    "calories": 2395,
+    "fat": 132.2,
+    "protein": 205.7,
     "carbohydrates": 107.7,
     "fiber": 39.0
   },
