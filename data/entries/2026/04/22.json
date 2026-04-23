@@ -1,0 +1,59 @@
+{
+  "date": "2026-04-22",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "4 eggs scrambled, 2 slices colby cheese, 1/2 pork sausage, 1/2 medium sweet potato",
+    "calories": 655,
+    "fat": 45.3,
+    "protein": 45.2,
+    "carbohydrates": 15.6,
+    "fiber": 2.0
+  },
+  "lunch": {
+    "mealName": "2 slices Hero brand bread, 1 tbsp mayonnaise, 5 slices ham, 1 large Fuji apple",
+    "calories": 429,
+    "fat": 17.9,
+    "protein": 20.5,
+    "carbohydrates": 64.1,
+    "fiber": 29.0
+  },
+  "dinner": {
+    "mealName": "2 pork Italian sausages, 1 hamburger patty",
+    "calories": 703,
+    "fat": 55,
+    "protein": 47,
+    "carbohydrates": 4,
+    "fiber": 0
+  },
+  "snacks": [
+    {
+      "mealName": "Protein shake",
+      "calories": 328,
+      "fat": 8,
+      "protein": 40,
+      "carbohydrates": 24,
+      "fiber": 8
+    },
+    {
+      "mealName": "Chicken breast",
+      "calories": 280,
+      "fat": 6,
+      "protein": 53,
+      "carbohydrates": 0,
+      "fiber": 0
+    }
+  ],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-04-23T02:05:39Z",
+  "dailyTotal": {
+    "calories": 2395,
+    "fat": 132.2,
+    "protein": 205.7,
+    "carbohydrates": 107.7,
+    "fiber": 39.0
+  },
+  "waterOz": 60
+}
