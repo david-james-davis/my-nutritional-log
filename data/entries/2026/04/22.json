@@ -48,12 +48,17 @@
       "activity": "brisk walking",
       "durationMinutes": 60,
       "caloriesBurned": 330
+    },
+    {
+      "activity": "morning strength workout (2x45 pushups, 2x30 situps, bench press 2x50 lb each arm)",
+      "durationMinutes": 20,
+      "caloriesBurned": 165
     }
   ],
   "exerciseTotal": {
-    "caloriesBurned": 330
+    "caloriesBurned": 495
   },
-  "updatedAt": "2026-04-23T03:47:32Z",
+  "updatedAt": "2026-04-23T03:51:03Z",
   "dailyTotal": {
     "calories": 2395,
     "fat": 132.2,
