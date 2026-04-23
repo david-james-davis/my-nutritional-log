@@ -43,11 +43,17 @@
       "fiber": 0
     }
   ],
-  "exercise": [],
+  "exercise": [
+    {
+      "activity": "brisk walking",
+      "durationMinutes": 60,
+      "caloriesBurned": 330
+    }
+  ],
   "exerciseTotal": {
-    "caloriesBurned": 0
+    "caloriesBurned": 330
   },
-  "updatedAt": "2026-04-23T02:05:39Z",
+  "updatedAt": "2026-04-23T03:47:32Z",
   "dailyTotal": {
     "calories": 2395,
     "fat": 132.2,
@@ -55,5 +61,5 @@
     "carbohydrates": 107.7,
     "fiber": 39.0
   },
-  "waterOz": 60
+  "waterOz": 72
 }
