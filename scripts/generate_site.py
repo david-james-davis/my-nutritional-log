@@ -340,7 +340,7 @@ def render_goals_tab():
             <div class="goals-stat-grid">
               {stat_card("Weight", f"{gw} lbs", color="#27ae60")}
               {stat_card("Body Fat", f"{gbf}%", f"{g_fat} lbs fat", color="#27ae60")}
-              {stat_card("Lean Mass", f"{g_lean} lbs", color="#2980b9")}
+              {stat_card("Lean Mass", f"{g_lean}+ lbs", "more with muscle gain", color="#2980b9")}
             </div>
           </div>
         </div>
