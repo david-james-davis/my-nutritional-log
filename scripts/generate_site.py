@@ -76,6 +76,14 @@ GOALS = {
 
 WEIGHT_LBS = 209
 
+BODY_STATS = {
+    "current_weight_lbs": 209,
+    "current_bf_pct": 22,
+    "goal_weight_lbs": 185,
+    "goal_bf_pct": 12,
+    "start_weight_lbs": 209,  # update if you want progress bar to reflect a higher starting point
+}
+
 MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
                "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
@@ -286,10 +294,103 @@ def render_history_tab(entries):
       </div>"""
 
 
+def render_goals_tab():
+    cw = BODY_STATS["current_weight_lbs"]
+    cbf = BODY_STATS["current_bf_pct"]
+    gw = BODY_STATS["goal_weight_lbs"]
+    gbf = BODY_STATS["goal_bf_pct"]
+    sw = BODY_STATS["start_weight_lbs"]
+
+    c_fat = round(cw * cbf / 100)
+    c_lean = cw - c_fat
+    g_fat = round(gw * gbf / 100)
+    g_lean = gw - g_fat
+
+    lbs_to_go = cw - gw
+    weight_progress = max(0, min(100, round((sw - cw) / (sw - gw) * 100))) if sw != gw else 100
+    progress_color = "#27ae60" if weight_progress >= 50 else "#e67e22"
+
+    water_oz = round(WEIGHT_LBS * 0.5)
+
+    def stat_card(label, value, sub="", color="#2c3e50"):
+        sub_html = f'<div class="goals-stat-sub">{sub}</div>' if sub else ""
+        return f"""
+        <div class="goals-stat-card" style="border-top: 4px solid {color}">
+          <div class="goals-stat-value">{value}</div>
+          <div class="goals-stat-label">{label}</div>
+          {sub_html}
+        </div>"""
+
+    return f"""
+      <h2>My Goals</h2>
+
+      <div class="chart-section">
+        <h3>Body Composition</h3>
+        <div class="goals-two-col">
+          <div>
+            <div class="goals-col-heading">Current</div>
+            <div class="goals-stat-grid">
+              {stat_card("Weight", f"{cw} lbs", color="#e67e22")}
+              {stat_card("Body Fat", f"{cbf}%", f"{c_fat} lbs fat", color="#e74c3c")}
+              {stat_card("Lean Mass", f"{c_lean} lbs", color="#2980b9")}
+            </div>
+          </div>
+          <div>
+            <div class="goals-col-heading">Goal</div>
+            <div class="goals-stat-grid">
+              {stat_card("Weight", f"{gw} lbs", color="#27ae60")}
+              {stat_card("Body Fat", f"{gbf}%", f"{g_fat} lbs fat", color="#27ae60")}
+              {stat_card("Lean Mass", f"{g_lean} lbs", color="#2980b9")}
+            </div>
+          </div>
+        </div>
+
+        <div class="goals-progress-section">
+          <div class="goals-progress-label">
+            <span>Weight Progress</span>
+            <span>{cw} lbs &rarr; {gw} lbs &nbsp;&bull;&nbsp; {lbs_to_go} lbs to go</span>
+          </div>
+          <div class="goals-progress-track">
+            <div class="goals-progress-fill" style="width:{weight_progress}%; background:{progress_color}"></div>
+          </div>
+          <div class="goals-progress-pct">{weight_progress}% of the way there</div>
+        </div>
+      </div>
+
+      <div class="chart-section">
+        <h3>Daily Nutrition Targets</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Macro</th><th>Daily Goal</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="meal-label">Calories</td><td>{GOALS['calories']:g} kcal</td><td>Moderate deficit for recomp</td></tr>
+              <tr><td class="meal-label">Protein</td><td>{GOALS['protein']:g} g</td><td>1 g per lb of bodyweight</td></tr>
+              <tr><td class="meal-label">Fat</td><td>{GOALS['fat']:g} g</td><td>~30% of calories</td></tr>
+              <tr><td class="meal-label">Carbohydrates</td><td>{GOALS['carbs']:g} g</td><td>~43% of calories</td></tr>
+              <tr><td class="meal-label">Water</td><td>{water_oz} oz ({round(water_oz * 0.0296, 1)} L)</td><td>~0.5 oz per lb of bodyweight</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="chart-section">
+        <h3>Approach</h3>
+        <ul class="goals-approach-list">
+          <li>Body recomposition — losing fat while preserving and building muscle</li>
+          <li>Resistance training + creatine supplementation</li>
+          <li>High protein intake (1 g/lb) to protect lean mass during deficit</li>
+          <li>Target: {gbf}% body fat at {gw} lbs (athletic range for age 43)</li>
+        </ul>
+      </div>"""
+
+
 def generate_html(entries):
     featured, is_today = load_featured_entry(entries)
     today_content = render_today_tab(featured, is_today)
     history_content = render_history_tab(entries)
+    goals_content = render_goals_tab()
     all_days = build_chart_data(entries)
     all_days_json = json.dumps(all_days)
     goals_json = json.dumps(GOALS)
@@ -371,6 +472,27 @@ def generate_html(entries):
       .water-card {{ flex-direction: column; align-items: flex-start; gap: 0.5rem; }}
     }}
     .water-bar-fill {{ height: 100%; background: #3498db; border-radius: 999px; }}
+    .goals-two-col {{ display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }}
+    .goals-col-heading {{ font-size: 0.8rem; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.6rem; }}
+    .goals-stat-grid {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }}
+    .goals-stat-card {{ background: #f7f9fc; border-radius: 8px; padding: 0.9rem 0.75rem; text-align: center; }}
+    .goals-stat-value {{ font-size: 1.4rem; font-weight: 700; line-height: 1; color: #2c3e50; }}
+    .goals-stat-label {{ font-size: 0.7rem; color: #888; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.35rem; }}
+    .goals-stat-sub {{ font-size: 0.7rem; color: #aaa; margin-top: 0.2rem; }}
+    .goals-progress-section {{ margin-top: 0.5rem; }}
+    .goals-progress-label {{ display: flex; justify-content: space-between; font-size: 0.8rem; color: #555; margin-bottom: 0.4rem; }}
+    .goals-progress-track {{ height: 10px; background: #e0e0e0; border-radius: 999px; overflow: hidden; }}
+    .goals-progress-fill {{ height: 100%; border-radius: 999px; transition: width 0.3s; }}
+    .goals-progress-pct {{ font-size: 0.75rem; color: #888; margin-top: 0.35rem; text-align: right; }}
+    .goals-approach-list {{ list-style: none; padding: 0; }}
+    .goals-approach-list li {{ padding: 0.5rem 0; border-bottom: 1px solid #f0f0f0; font-size: 0.9rem; color: #444; padding-left: 1.2rem; position: relative; }}
+    .goals-approach-list li::before {{ content: "→"; position: absolute; left: 0; color: #27ae60; font-weight: 700; }}
+    .goals-approach-list li:last-child {{ border-bottom: none; }}
+    @media (max-width: 600px) {{
+      .goals-two-col {{ grid-template-columns: 1fr; gap: 1rem; }}
+      .goals-stat-grid {{ grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }}
+      .goals-stat-value {{ font-size: 1.1rem; }}
+    }}
   </style>
 </head>
 <body>
@@ -382,6 +504,7 @@ def generate_html(entries):
   <div class="tabs">
     <button class="tab-btn active" onclick="showTab('today', this)">Today</button>
     <button class="tab-btn" onclick="showTab('history', this)">History</button>
+    <button class="tab-btn" onclick="showTab('goals', this)">Goals</button>
   </div>
 
   <div id="tab-today" class="tab-panel active">
@@ -390,6 +513,10 @@ def generate_html(entries):
 
   <div id="tab-history" class="tab-panel">
     {history_content}
+  </div>
+
+  <div id="tab-goals" class="tab-panel">
+    {goals_content}
   </div>
 
   <script>
