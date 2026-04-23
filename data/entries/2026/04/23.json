@@ -25,17 +25,27 @@
     "carbohydrates": 0,
     "fiber": 0
   },
-  "snacks": [],
+  "snacks": [
+    {
+      "mealName": "8 oz black coffee",
+      "calories": 2,
+      "fat": 0,
+      "protein": 0,
+      "carbohydrates": 0,
+      "fiber": 0
+    }
+  ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-04-23T14:44:42Z",
+  "updatedAt": "2026-04-23T17:51:46Z",
   "dailyTotal": {
-    "calories": 766,
+    "calories": 768,
     "fat": 28.1,
     "protein": 67.5,
     "carbohydrates": 62.6,
     "fiber": 15.1
-  }
+  },
+  "waterOz": 18
 }
