@@ -41,19 +41,27 @@
       "protein": 0.4,
       "carbohydrates": 35.8,
       "fiber": 5.0
+    },
+    {
+      "mealName": "1 pork Italian sausage",
+      "calories": 251,
+      "fat": 20,
+      "protein": 16,
+      "carbohydrates": 2,
+      "fiber": 0
     }
   ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-04-23T19:20:08Z",
+  "updatedAt": "2026-04-23T23:53:14Z",
   "dailyTotal": {
-    "calories": 1677,
-    "fat": 75.1,
-    "protein": 119.9,
-    "carbohydrates": 122.4,
+    "calories": 1928,
+    "fat": 95.1,
+    "protein": 135.9,
+    "carbohydrates": 124.4,
     "fiber": 22.6
   },
-  "waterOz": 18
+  "waterOz": 48
 }
