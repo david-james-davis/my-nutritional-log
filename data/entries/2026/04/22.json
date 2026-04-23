@@ -25,18 +25,27 @@
     "carbohydrates": 4,
     "fiber": 0
   },
-  "snacks": [],
+  "snacks": [
+    {
+      "mealName": "Protein shake",
+      "calories": 328,
+      "fat": 8,
+      "protein": 40,
+      "carbohydrates": 24,
+      "fiber": 8
+    }
+  ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-04-22T22:48:38Z",
+  "updatedAt": "2026-04-23T01:02:05Z",
   "dailyTotal": {
-    "calories": 1787,
-    "fat": 118.2,
-    "protein": 112.7,
-    "carbohydrates": 83.7,
-    "fiber": 31.0
+    "calories": 2115,
+    "fat": 126.2,
+    "protein": 152.7,
+    "carbohydrates": 107.7,
+    "fiber": 39.0
   },
   "waterOz": 36
 }
