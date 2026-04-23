@@ -1,0 +1,41 @@
+{
+  "date": "2026-04-23",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "4 fried eggs, half medium sweet potato, protein shake, one banana",
+    "calories": 766,
+    "fat": 28.1,
+    "protein": 67.5,
+    "carbohydrates": 62.6,
+    "fiber": 15.1
+  },
+  "lunch": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-04-23T14:44:42Z",
+  "dailyTotal": {
+    "calories": 766,
+    "fat": 28.1,
+    "protein": 67.5,
+    "carbohydrates": 62.6,
+    "fiber": 15.1
+  }
+}
