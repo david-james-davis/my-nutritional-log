@@ -1,0 +1,42 @@
+{
+  "date": "2026-04-24",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "4 fried eggs, half medium sweet potato, 6 raspberries",
+    "calories": 346,
+    "fat": 18.8,
+    "protein": 26.4,
+    "carbohydrates": 16.6,
+    "fiber": 3.5
+  },
+  "lunch": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-04-24T16:24:45Z",
+  "dailyTotal": {
+    "calories": 346,
+    "fat": 18.8,
+    "protein": 26.4,
+    "carbohydrates": 16.6,
+    "fiber": 3.5
+  },
+  "waterOz": 18
+}
