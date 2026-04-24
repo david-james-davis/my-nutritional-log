@@ -33,19 +33,27 @@
       "protein": 0.4,
       "carbohydrates": 35.8,
       "fiber": 5.0
+    },
+    {
+      "mealName": "5 dried Turkish apricots",
+      "calories": 90,
+      "fat": 0,
+      "protein": 1,
+      "carbohydrates": 22,
+      "fiber": 3
     }
   ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-04-24T17:47:42Z",
+  "updatedAt": "2026-04-24T17:55:29Z",
   "dailyTotal": {
-    "calories": 690,
+    "calories": 780,
     "fat": 30.8,
-    "protein": 46.8,
-    "carbohydrates": 76.4,
-    "fiber": 28.5
+    "protein": 47.8,
+    "carbohydrates": 98.4,
+    "fiber": 31.5
   },
   "waterOz": 18
 }
