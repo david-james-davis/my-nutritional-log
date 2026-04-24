@@ -63,7 +63,7 @@
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-04-24T19:18:28Z",
+  "updatedAt": "2026-04-24T19:20:21Z",
   "dailyTotal": {
     "calories": 1257,
     "fat": 39.3,
@@ -71,5 +71,5 @@
     "carbohydrates": 158.2,
     "fiber": 44.5
   },
-  "waterOz": 18
+  "waterOz": 44
 }
