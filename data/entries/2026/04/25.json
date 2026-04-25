@@ -41,19 +41,27 @@
       "protein": 0.4,
       "carbohydrates": 35.8,
       "fiber": 5.0
+    },
+    {
+      "mealName": "1/4 cup sprouted pumpkin seeds",
+      "calories": 183,
+      "fat": 15,
+      "protein": 8,
+      "carbohydrates": 3,
+      "fiber": 2
     }
   ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-04-25T19:52:04Z",
+  "updatedAt": "2026-04-25T19:54:48Z",
   "dailyTotal": {
-    "calories": 687,
-    "fat": 29.1,
-    "protein": 52.1,
-    "carbohydrates": 53.6,
-    "fiber": 8.6
+    "calories": 870,
+    "fat": 44.1,
+    "protein": 60.1,
+    "carbohydrates": 56.6,
+    "fiber": 10.6
   },
   "waterOz": 32
 }
