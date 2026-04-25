@@ -18,12 +18,12 @@
     "fiber": 20
   },
   "dinner": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "1/4 iceberg lettuce, 1.5 chicken breasts, 1 tsp ghee, 2 tbsp blue cheese dressing",
+    "calories": 630,
+    "fat": 30,
+    "protein": 80.5,
+    "carbohydrates": 5,
+    "fiber": 1
   },
   "snacks": [
     {
@@ -63,13 +63,13 @@
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-04-24T19:20:21Z",
+  "updatedAt": "2026-04-25T00:28:34Z",
   "dailyTotal": {
-    "calories": 1257,
-    "fat": 39.3,
-    "protein": 88.2,
-    "carbohydrates": 158.2,
-    "fiber": 44.5
+    "calories": 1887,
+    "fat": 69.3,
+    "protein": 168.7,
+    "carbohydrates": 163.2,
+    "fiber": 45.5
   },
   "waterOz": 44
 }
