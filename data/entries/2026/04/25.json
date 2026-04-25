@@ -1,0 +1,41 @@
+{
+  "date": "2026-04-25",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "3 eggs, 1/4 cup tzatziki sauce, 10 pistachios, 1 slice wheat bread with butter",
+    "calories": 398,
+    "fat": 25.6,
+    "protein": 25.2,
+    "carbohydrates": 17.8,
+    "fiber": 3.6
+  },
+  "lunch": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-04-25T14:47:15Z",
+  "dailyTotal": {
+    "calories": 398,
+    "fat": 25.6,
+    "protein": 25.2,
+    "carbohydrates": 17.8,
+    "fiber": 3.6
+  }
+}
