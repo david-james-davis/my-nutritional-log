@@ -25,18 +25,35 @@
     "carbohydrates": 0,
     "fiber": 0
   },
-  "snacks": [],
+  "snacks": [
+    {
+      "mealName": "1/2 chicken breast",
+      "calories": 140,
+      "fat": 3,
+      "protein": 26.5,
+      "carbohydrates": 0,
+      "fiber": 0
+    },
+    {
+      "mealName": "Large Fuji apple",
+      "calories": 149,
+      "fat": 0.5,
+      "protein": 0.4,
+      "carbohydrates": 35.8,
+      "fiber": 5.0
+    }
+  ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-04-25T15:21:55Z",
+  "updatedAt": "2026-04-25T19:52:04Z",
   "dailyTotal": {
-    "calories": 398,
-    "fat": 25.6,
-    "protein": 25.2,
-    "carbohydrates": 17.8,
-    "fiber": 3.6
+    "calories": 687,
+    "fat": 29.1,
+    "protein": 52.1,
+    "carbohydrates": 53.6,
+    "fiber": 8.6
   },
   "waterOz": 32
 }
