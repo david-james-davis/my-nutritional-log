@@ -51,11 +51,17 @@
       "fiber": 2
     }
   ],
-  "exercise": [],
+  "exercise": [
+    {
+      "activity": "slow walking",
+      "durationMinutes": 120,
+      "caloriesBurned": 440
+    }
+  ],
   "exerciseTotal": {
-    "caloriesBurned": 0
+    "caloriesBurned": 440
   },
-  "updatedAt": "2026-04-25T19:54:48Z",
+  "updatedAt": "2026-04-25T19:58:12Z",
   "dailyTotal": {
     "calories": 870,
     "fat": 44.1,
