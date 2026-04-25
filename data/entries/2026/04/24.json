@@ -57,19 +57,27 @@
       "protein": 0.4,
       "carbohydrates": 35.8,
       "fiber": 5.0
+    },
+    {
+      "mealName": "Date",
+      "calories": 66,
+      "fat": 0.1,
+      "protein": 0.4,
+      "carbohydrates": 18,
+      "fiber": 1.6
     }
   ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-04-25T00:28:34Z",
+  "updatedAt": "2026-04-25T00:47:59Z",
   "dailyTotal": {
-    "calories": 1887,
-    "fat": 69.3,
-    "protein": 168.7,
-    "carbohydrates": 163.2,
-    "fiber": 45.5
+    "calories": 1953,
+    "fat": 69.4,
+    "protein": 169.1,
+    "carbohydrates": 181.2,
+    "fiber": 47.1
   },
   "waterOz": 44
 }
