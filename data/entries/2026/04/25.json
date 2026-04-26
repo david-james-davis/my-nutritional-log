@@ -57,6 +57,14 @@
       "protein": 40,
       "carbohydrates": 24,
       "fiber": 8
+    },
+    {
+      "mealName": "1/4 cup mixed nuts",
+      "calories": 172,
+      "fat": 15.4,
+      "protein": 5.4,
+      "carbohydrates": 6,
+      "fiber": 2.8
     }
   ],
   "exercise": [
@@ -69,13 +77,13 @@
   "exerciseTotal": {
     "caloriesBurned": 440
   },
-  "updatedAt": "2026-04-26T02:51:33Z",
+  "updatedAt": "2026-04-26T02:53:37Z",
   "dailyTotal": {
-    "calories": 2005,
-    "fat": 81.7,
-    "protein": 173.2,
-    "carbohydrates": 143.7,
-    "fiber": 60.6
+    "calories": 2177,
+    "fat": 97.1,
+    "protein": 178.6,
+    "carbohydrates": 149.7,
+    "fiber": 63.4
   },
   "waterOz": 32
 }
