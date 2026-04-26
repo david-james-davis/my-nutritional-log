@@ -18,12 +18,12 @@
     "fiber": 0
   },
   "dinner": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "1/2 cup pinto beans, 1 tbsp sour cream, 1 chicken breast, 1/2 avocado, keto tortilla",
+    "calories": 807,
+    "fat": 29.6,
+    "protein": 73.1,
+    "carbohydrates": 63.1,
+    "fiber": 42.0
   },
   "snacks": [
     {
@@ -61,13 +61,13 @@
   "exerciseTotal": {
     "caloriesBurned": 440
   },
-  "updatedAt": "2026-04-25T19:58:12Z",
+  "updatedAt": "2026-04-25T20:05:34Z",
   "dailyTotal": {
-    "calories": 870,
-    "fat": 44.1,
-    "protein": 60.1,
-    "carbohydrates": 56.6,
-    "fiber": 10.6
+    "calories": 1677,
+    "fat": 73.7,
+    "protein": 133.2,
+    "carbohydrates": 119.7,
+    "fiber": 52.6
   },
   "waterOz": 32
 }
