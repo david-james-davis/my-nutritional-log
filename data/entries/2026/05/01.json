@@ -1,0 +1,42 @@
+{
+  "date": "2026-05-01",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "3 fried poached eggs, 1 cup greens, 1/2 small baguette",
+    "calories": 401,
+    "fat": 19.7,
+    "protein": 24.4,
+    "carbohydrates": 31.2,
+    "fiber": 2.4
+  },
+  "lunch": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-05-01T15:16:00Z",
+  "dailyTotal": {
+    "calories": 401,
+    "fat": 19.7,
+    "protein": 24.4,
+    "carbohydrates": 31.2,
+    "fiber": 2.4
+  },
+  "waterOz": 0
+}
