@@ -10,12 +10,12 @@
     "fiber": 13.0
   },
   "lunch": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "1 lahmajune Armenian pizza, original recipe",
+    "calories": 230,
+    "fat": 8,
+    "protein": 11,
+    "carbohydrates": 29,
+    "fiber": 2
   },
   "dinner": {
     "mealName": "",
@@ -30,13 +30,13 @@
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-05-01T15:36:00Z",
+  "updatedAt": "2026-05-01T16:27:00Z",
   "dailyTotal": {
-    "calories": 555,
-    "fat": 16.7,
-    "protein": 39.9,
-    "carbohydrates": 63.9,
-    "fiber": 13.0
+    "calories": 785,
+    "fat": 24.7,
+    "protein": 50.9,
+    "carbohydrates": 92.9,
+    "fiber": 15.0
   },
   "waterOz": 0
 }
