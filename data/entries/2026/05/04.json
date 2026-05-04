@@ -1,0 +1,42 @@
+{
+  "date": "2026-05-04",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "2 dates, 1/2 small sweet potato",
+    "calories": 175,
+    "fat": 0.1,
+    "protein": 1.6,
+    "carbohydrates": 46.0,
+    "fiber": 4.7
+  },
+  "lunch": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-05-04T19:23:43Z",
+  "dailyTotal": {
+    "calories": 175,
+    "fat": 0.1,
+    "protein": 1.6,
+    "carbohydrates": 46.0,
+    "fiber": 4.7
+  },
+  "waterOz": 0
+}
