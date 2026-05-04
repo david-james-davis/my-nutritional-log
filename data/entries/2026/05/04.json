@@ -33,19 +33,27 @@
       "protein": 1,
       "carbohydrates": 11,
       "fiber": 1
+    },
+    {
+      "mealName": "1/4 cup Nature Source salad topper",
+      "calories": 150,
+      "fat": 11,
+      "protein": 5,
+      "carbohydrates": 10,
+      "fiber": 2
     }
   ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-05-04T19:34:00Z",
+  "updatedAt": "2026-05-04T19:59:00Z",
   "dailyTotal": {
-    "calories": 572,
-    "fat": 20.5,
-    "protein": 36.7,
-    "carbohydrates": 79.0,
-    "fiber": 25.7
+    "calories": 722,
+    "fat": 31.5,
+    "protein": 41.7,
+    "carbohydrates": 89.0,
+    "fiber": 27.7
   },
   "waterOz": 0
 }
