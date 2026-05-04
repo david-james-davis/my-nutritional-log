@@ -10,12 +10,12 @@
     "fiber": 4.7
   },
   "lunch": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "Sandwich with one can of tuna, 1 tablespoon of mayonnaise, 2 slices Inked Keto Seeds Bread",
+    "calories": 304,
+    "fat": 15.4,
+    "protein": 34.1,
+    "carbohydrates": 22.0,
+    "fiber": 20.0
   },
   "dinner": {
     "mealName": "",
@@ -30,13 +30,13 @@
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-05-04T19:23:43Z",
+  "updatedAt": "2026-05-04T19:32:21Z",
   "dailyTotal": {
-    "calories": 175,
-    "fat": 0.1,
-    "protein": 1.6,
-    "carbohydrates": 46.0,
-    "fiber": 4.7
+    "calories": 479,
+    "fat": 15.5,
+    "protein": 35.7,
+    "carbohydrates": 68.0,
+    "fiber": 24.7
   },
   "waterOz": 0
 }
