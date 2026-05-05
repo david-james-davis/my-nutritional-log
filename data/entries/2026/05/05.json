@@ -33,19 +33,27 @@
       "protein": 0.5,
       "carbohydrates": 25.0,
       "fiber": 4.4
+    },
+    {
+      "mealName": "1/4 cup Go Raw organic sprouted pumpkin seeds",
+      "calories": 180,
+      "fat": 13.0,
+      "protein": 8.0,
+      "carbohydrates": 4.0,
+      "fiber": 3.0
     }
   ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-05-05T18:37:00Z",
+  "updatedAt": "2026-05-05T19:39:00Z",
   "dailyTotal": {
-    "calories": 1133,
-    "fat": 41.2,
-    "protein": 87.1,
-    "carbohydrates": 110.6,
-    "fiber": 14.5
+    "calories": 1313,
+    "fat": 54.2,
+    "protein": 95.1,
+    "carbohydrates": 114.6,
+    "fiber": 17.5
   },
   "waterOz": 0
 }
