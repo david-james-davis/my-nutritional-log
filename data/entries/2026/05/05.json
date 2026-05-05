@@ -1,0 +1,42 @@
+{
+  "date": "2026-05-05",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "4 oz lavash bread, 1/4 sweet potato, 5 scrambled eggs",
+    "calories": 665,
+    "fat": 24.0,
+    "protein": 48.0,
+    "carbohydrates": 71.8,
+    "fiber": 8.1
+  },
+  "lunch": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-05-05T15:22:00Z",
+  "dailyTotal": {
+    "calories": 665,
+    "fat": 24.0,
+    "protein": 48.0,
+    "carbohydrates": 71.8,
+    "fiber": 8.1
+  },
+  "waterOz": 0
+}
