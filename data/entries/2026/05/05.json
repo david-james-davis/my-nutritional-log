@@ -10,12 +10,12 @@
     "fiber": 8.1
   },
   "lunch": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "Half chicken breast, 1/2 small sweet potato, 2 scrambled eggs with 1 tsp ghee",
+    "calories": 373,
+    "fat": 16.9,
+    "protein": 38.6,
+    "carbohydrates": 13.8,
+    "fiber": 2.0
   },
   "dinner": {
     "mealName": "",
@@ -39,13 +39,13 @@
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-05-05T18:35:00Z",
+  "updatedAt": "2026-05-05T18:37:00Z",
   "dailyTotal": {
-    "calories": 760,
-    "fat": 24.3,
-    "protein": 48.5,
-    "carbohydrates": 96.8,
-    "fiber": 12.5
+    "calories": 1133,
+    "fat": 41.2,
+    "protein": 87.1,
+    "carbohydrates": 110.6,
+    "fiber": 14.5
   },
   "waterOz": 0
 }
