@@ -57,6 +57,14 @@
       "protein": 0.4,
       "carbohydrates": 20.5,
       "fiber": 3.6
+    },
+    {
+      "mealName": "Honey Stinger protein bar",
+      "calories": 260,
+      "fat": 15.0,
+      "protein": 14.0,
+      "carbohydrates": 21.0,
+      "fiber": 2.0
     }
   ],
   "exercise": [
@@ -74,13 +82,13 @@
   "exerciseTotal": {
     "caloriesBurned": 410
   },
-  "updatedAt": "2026-05-06T02:05:00Z",
+  "updatedAt": "2026-05-06T02:06:00Z",
   "dailyTotal": {
-    "calories": 2128,
-    "fat": 75.6,
-    "protein": 182.7,
-    "carbohydrates": 190.7,
-    "fiber": 28.5
+    "calories": 2388,
+    "fat": 90.6,
+    "protein": 196.7,
+    "carbohydrates": 211.7,
+    "fiber": 30.5
   },
   "waterOz": 0
 }
