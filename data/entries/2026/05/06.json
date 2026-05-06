@@ -10,12 +10,12 @@
     "fiber": 8.6
   },
   "lunch": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "Chicken breast, small Fuji apple, 8 mixed nuts",
+    "calories": 414,
+    "fat": 11.3,
+    "protein": 55.2,
+    "carbohydrates": 22.5,
+    "fiber": 4.6
   },
   "dinner": {
     "mealName": "",
@@ -38,11 +38,11 @@
   },
   "updatedAt": "2026-05-06T18:53:43Z",
   "dailyTotal": {
-    "calories": 548,
-    "fat": 21.9,
-    "protein": 27.9,
-    "carbohydrates": 62.3,
-    "fiber": 8.6
+    "calories": 962,
+    "fat": 33.2,
+    "protein": 83.1,
+    "carbohydrates": 84.8,
+    "fiber": 13.2
   },
   "waterOz": 0
 }
