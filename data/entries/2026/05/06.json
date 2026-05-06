@@ -25,7 +25,16 @@
     "carbohydrates": 0,
     "fiber": 0
   },
-  "snacks": [],
+  "snacks": [
+    {
+      "mealName": "3 eggs, small Fuji apple",
+      "calories": 287,
+      "fat": 15.1,
+      "protein": 19.3,
+      "carbohydrates": 21.7,
+      "fiber": 3.6
+    }
+  ],
   "exercise": [
     {
       "activity": "vigorous walking",
@@ -36,13 +45,13 @@
   "exerciseTotal": {
     "caloriesBurned": 210
   },
-  "updatedAt": "2026-05-06T18:53:43Z",
+  "updatedAt": "2026-05-06T21:36:00Z",
   "dailyTotal": {
-    "calories": 962,
-    "fat": 33.2,
-    "protein": 83.1,
-    "carbohydrates": 84.8,
-    "fiber": 13.2
+    "calories": 1249,
+    "fat": 48.3,
+    "protein": 102.4,
+    "carbohydrates": 106.5,
+    "fiber": 16.8
   },
   "waterOz": 0
 }
