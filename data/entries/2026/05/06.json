@@ -33,6 +33,14 @@
       "protein": 19.3,
       "carbohydrates": 21.7,
       "fiber": 3.6
+    },
+    {
+      "mealName": "Protein shake, 2 scoops",
+      "calories": 240,
+      "fat": 2.0,
+      "protein": 50.0,
+      "carbohydrates": 6.0,
+      "fiber": 2.0
     }
   ],
   "exercise": [
@@ -45,13 +53,13 @@
   "exerciseTotal": {
     "caloriesBurned": 210
   },
-  "updatedAt": "2026-05-06T21:36:00Z",
+  "updatedAt": "2026-05-06T20:45:15Z",
   "dailyTotal": {
-    "calories": 1249,
-    "fat": 48.3,
-    "protein": 102.4,
-    "carbohydrates": 106.5,
-    "fiber": 16.8
+    "calories": 1489,
+    "fat": 50.3,
+    "protein": 152.4,
+    "carbohydrates": 112.5,
+    "fiber": 18.8
   },
   "waterOz": 0
 }
