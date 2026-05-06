@@ -64,12 +64,17 @@
       "activity": "vigorous walking",
       "durationMinutes": 30,
       "caloriesBurned": 210
+    },
+    {
+      "activity": "strength workout: 3x10 kettlebell swings (70 lb), 3x10 box step-ups, 3x30 situps, 3x10 curls (50 lb)",
+      "durationMinutes": 20,
+      "caloriesBurned": 200
     }
   ],
   "exerciseTotal": {
-    "caloriesBurned": 210
+    "caloriesBurned": 410
   },
-  "updatedAt": "2026-05-06T02:02:00Z",
+  "updatedAt": "2026-05-06T02:05:00Z",
   "dailyTotal": {
     "calories": 2128,
     "fat": 75.6,
