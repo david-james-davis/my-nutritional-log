@@ -1,0 +1,42 @@
+{
+  "date": "2026-05-06",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "1/2 small sweet potato, 4 hard boiled eggs, small Fuji apple, one banana",
+    "calories": 548,
+    "fat": 21.9,
+    "protein": 27.9,
+    "carbohydrates": 62.3,
+    "fiber": 8.6
+  },
+  "lunch": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-05-06T16:53:04Z",
+  "dailyTotal": {
+    "calories": 548,
+    "fat": 21.9,
+    "protein": 27.9,
+    "carbohydrates": 62.3,
+    "fiber": 8.6
+  },
+  "waterOz": 0
+}
