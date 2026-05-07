@@ -48,12 +48,17 @@
       "activity": "vigorous walking",
       "durationMinutes": 30,
       "caloriesBurned": 210
+    },
+    {
+      "activity": "moderate pace walking",
+      "durationMinutes": 60,
+      "caloriesBurned": 360
     }
   ],
   "exerciseTotal": {
-    "caloriesBurned": 210
+    "caloriesBurned": 570
   },
-  "updatedAt": "2026-05-06T19:22:00Z",
+  "updatedAt": "2026-05-07T02:23:00Z",
   "dailyTotal": {
     "calories": 1867,
     "fat": 56.5,
