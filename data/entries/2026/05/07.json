@@ -26,11 +26,17 @@
     "fiber": 0
   },
   "snacks": [],
-  "exercise": [],
+  "exercise": [
+    {
+      "activity": "strength workout: 3 sets of 5 reverse pullups, 3 sets of 8 lunges (70 lb), 3 sets of 30 situps",
+      "durationMinutes": 20,
+      "caloriesBurned": 200
+    }
+  ],
   "exerciseTotal": {
-    "caloriesBurned": 0
+    "caloriesBurned": 200
   },
-  "updatedAt": "2026-05-07T22:03:38Z",
+  "updatedAt": "2026-05-07T22:05:10Z",
   "dailyTotal": {
     "calories": 850,
     "fat": 32.2,
