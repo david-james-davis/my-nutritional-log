@@ -18,12 +18,12 @@
     "fiber": 4.6
   },
   "dinner": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "Chicken breast, 1/2 small sweet potato",
+    "calories": 358,
+    "fat": 6.2,
+    "protein": 54.1,
+    "carbohydrates": 13.0,
+    "fiber": 2.3
   },
   "snacks": [
     {
@@ -53,13 +53,13 @@
   "exerciseTotal": {
     "caloriesBurned": 210
   },
-  "updatedAt": "2026-05-06T20:45:15Z",
+  "updatedAt": "2026-05-06T19:22:00Z",
   "dailyTotal": {
-    "calories": 1489,
-    "fat": 50.3,
-    "protein": 152.4,
-    "carbohydrates": 112.5,
-    "fiber": 18.8
+    "calories": 1867,
+    "fat": 56.5,
+    "protein": 206.5,
+    "carbohydrates": 125.5,
+    "fiber": 21.1
   },
   "waterOz": 0
 }
