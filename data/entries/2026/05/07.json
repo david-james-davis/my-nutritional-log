@@ -1,0 +1,42 @@
+{
+  "date": "2026-05-07",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "5 fried eggs, 1/2 small sweet potato",
+    "calories": 405,
+    "fat": 23.5,
+    "protein": 31.7,
+    "carbohydrates": 11.0,
+    "fiber": 1.7
+  },
+  "lunch": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-05-07T14:36:42Z",
+  "dailyTotal": {
+    "calories": 405,
+    "fat": 23.5,
+    "protein": 31.7,
+    "carbohydrates": 11.0,
+    "fiber": 1.7
+  },
+  "waterOz": 0
+}
