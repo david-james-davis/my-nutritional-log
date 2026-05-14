@@ -1,0 +1,42 @@
+{
+  "date": "2026-05-14",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "1 Fuji apple, 4 fried eggs, 1 cup cooked buckwheat, 1 tsp ghee",
+    "calories": 631,
+    "fat": 27.3,
+    "protein": 30.6,
+    "carbohydrates": 71.5,
+    "fiber": 9.5
+  },
+  "lunch": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-05-14T14:30:00Z",
+  "dailyTotal": {
+    "calories": 631,
+    "fat": 27.3,
+    "protein": 30.6,
+    "carbohydrates": 71.5,
+    "fiber": 9.5
+  },
+  "waterOz": 0
+}
