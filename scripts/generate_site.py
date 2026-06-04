@@ -68,7 +68,7 @@ def macro_card(label, value, unit, color):
 
 
 GOALS = {
-    "calories": 2487.1,
+    "calories": 2300,
     "protein": 209.0,
     "fat": 83.0,
     "carbs": 268.0,
