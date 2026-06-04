@@ -33,19 +33,27 @@
       "protein": 0.4,
       "carbohydrates": 35.8,
       "fiber": 5.0
+    },
+    {
+      "mealName": "Protein shake with Naked pea protein, peanut butter powder, and 1 banana",
+      "calories": 385,
+      "fat": 5,
+      "protein": 51,
+      "carbohydrates": 32,
+      "fiber": 6
     }
   ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-06-04T19:53:14Z",
+  "updatedAt": "2026-06-04T20:09:47Z",
   "dailyTotal": {
-    "calories": 1154,
-    "fat": 39.2,
-    "protein": 55.9,
-    "carbohydrates": 158.7,
-    "fiber": 59.7
+    "calories": 1539,
+    "fat": 44.2,
+    "protein": 106.9,
+    "carbohydrates": 190.7,
+    "fiber": 65.7
   },
   "waterOz": 0
 }
