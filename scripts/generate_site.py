@@ -67,6 +67,30 @@ def macro_card(label, value, unit, color):
         </div>"""
 
 
+def goal_progress_card(label, actual, goal, unit, color):
+    pct = round((actual / goal) * 100) if goal else 0
+    remaining = max(goal - actual, 0)
+    status = f"{actual:g} / {goal:g} {unit}"
+    detail = f"{pct}% of goal"
+    if actual <= goal:
+        detail += f" • {remaining:g} {unit} left"
+    else:
+        detail += f" • {actual - goal:g} {unit} over"
+    fill_pct = min((actual / goal) * 100, 100) if goal else 0
+    return f"""
+      <div class="goal-progress-card" style="border-left: 4px solid {color}">
+        <div class="goal-progress-top">
+          <div class="goal-progress-label">{label}</div>
+          <div class="goal-progress-percent">{pct}%</div>
+        </div>
+        <div class="goal-progress-meta">{status}</div>
+        <div class="goal-progress-track">
+          <div class="goal-progress-fill" style="width:{fill_pct}%; background:{color}"></div>
+        </div>
+        <div class="goal-progress-detail">{detail}</div>
+      </div>"""
+
+
 GOALS = {
     "calories": 2300,
     "protein": 209.0,
@@ -177,6 +201,12 @@ def render_today_tab(entry, is_today):
         </div>
       </div>"""
 
+    macro_goal_cards = "".join([
+        goal_progress_card("Protein", protein, GOALS["protein"], "g", "#2980b9"),
+        goal_progress_card("Fat", fat, GOALS["fat"], "g", "#8e44ad"),
+        goal_progress_card("Carbs", carbs, GOALS["carbs"], "g", "#27ae60"),
+    ])
+
     exercise_section = ""
     if activities:
         ex_rows = exercise_rows(activities)
@@ -221,6 +251,9 @@ def render_today_tab(entry, is_today):
       <div class="chart-section">
         <h3>Progress Toward Daily Goals</h3>
         <div class="chart-wrap" style="height:200px"><canvas id="chartGoals"></canvas></div>
+        <div class="goal-progress-grid">
+          {macro_goal_cards}
+        </div>
       </div>
 
       <h3>Meals</h3>
@@ -462,6 +495,15 @@ def generate_html(entries):
     .water-title {{ font-size: 0.75rem; font-weight: 600; color: #555; text-transform: uppercase; letter-spacing: 0.06em; }}
     .water-status {{ font-size: 1rem; font-weight: 600; color: #2c3e50; margin-top: 0.2rem; }}
     .water-bar-track {{ height: 6px; background: #e0f0fb; border-radius: 999px; margin-top: 0.5rem; width: min(200px, 100%); }}
+    .goal-progress-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.9rem; margin-top: 1.25rem; }}
+    .goal-progress-card {{ background: #f7f9fc; border-radius: 10px; padding: 0.9rem 1rem; }}
+    .goal-progress-top {{ display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; }}
+    .goal-progress-label {{ font-size: 0.8rem; font-weight: 700; color: #555; text-transform: uppercase; letter-spacing: 0.06em; }}
+    .goal-progress-percent {{ font-size: 1.1rem; font-weight: 700; color: #2c3e50; }}
+    .goal-progress-meta {{ font-size: 0.9rem; color: #2c3e50; margin-top: 0.2rem; }}
+    .goal-progress-track {{ height: 8px; background: #e3e8ee; border-radius: 999px; overflow: hidden; margin-top: 0.6rem; }}
+    .goal-progress-fill {{ height: 100%; border-radius: 999px; }}
+    .goal-progress-detail {{ font-size: 0.75rem; color: #6b7785; margin-top: 0.45rem; }}
     @media (max-width: 600px) {{
       header {{ padding: 1rem; }}
       .tabs {{ padding: 0; overflow-x: auto; }}
@@ -470,6 +512,7 @@ def generate_html(entries):
       .macro-value {{ font-size: 1.5rem; }}
       .chart-wrap {{ height: 220px !important; }}
       .water-card {{ flex-direction: column; align-items: flex-start; gap: 0.5rem; }}
+      .goal-progress-grid {{ grid-template-columns: 1fr; }}
     }}
     .water-bar-fill {{ height: 100%; background: #3498db; border-radius: 999px; }}
     .goals-two-col {{ display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }}
