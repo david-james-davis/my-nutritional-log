@@ -10,12 +10,12 @@
     "fiber": 10.2
   },
   "lunch": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "Brisket sandwich with 2 Hero hot dog buns, 2 slices brisket, 1 tbsp mayonnaise, mustard, pickles, onions",
+    "calories": 414,
+    "fat": 18,
+    "protein": 28.1,
+    "carbohydrates": 49.1,
+    "fiber": 44.5
   },
   "dinner": {
     "mealName": "",
@@ -30,13 +30,13 @@
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-06-04T16:58:36Z",
+  "updatedAt": "2026-06-04T19:44:39Z",
   "dailyTotal": {
-    "calories": 591,
-    "fat": 20.7,
-    "protein": 27.4,
-    "carbohydrates": 73.8,
-    "fiber": 10.2
+    "calories": 1005,
+    "fat": 38.7,
+    "protein": 55.5,
+    "carbohydrates": 122.9,
+    "fiber": 54.7
   },
   "waterOz": 0
 }
