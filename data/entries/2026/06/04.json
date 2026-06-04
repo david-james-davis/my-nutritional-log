@@ -1,0 +1,59 @@
+{
+  "date": "2026-06-04",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "1 small sweet potato, 4 eggs, 1 large Fuji apple",
+    "calories": 591,
+    "fat": 20.7,
+    "protein": 27.4,
+    "carbohydrates": 73.8,
+    "fiber": 10.2
+  },
+  "lunch": {
+    "mealName": "Brisket sandwich with 2 Hero hot dog buns, 2 slices brisket, 1 tbsp mayonnaise, mustard, pickles, onions",
+    "calories": 414,
+    "fat": 18,
+    "protein": 28.1,
+    "carbohydrates": 49.1,
+    "fiber": 44.5
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [
+    {
+      "mealName": "Large Fuji apple",
+      "calories": 149,
+      "fat": 0.5,
+      "protein": 0.4,
+      "carbohydrates": 35.8,
+      "fiber": 5.0
+    },
+    {
+      "mealName": "Protein shake with Naked pea protein, peanut butter powder, and 1 banana",
+      "calories": 385,
+      "fat": 5,
+      "protein": 51,
+      "carbohydrates": 32,
+      "fiber": 6
+    }
+  ],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-06-04T20:09:47Z",
+  "dailyTotal": {
+    "calories": 1539,
+    "fat": 44.2,
+    "protein": 106.9,
+    "carbohydrates": 190.7,
+    "fiber": 65.7
+  },
+  "waterOz": 0
+}

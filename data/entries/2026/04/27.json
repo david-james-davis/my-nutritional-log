@@ -1,0 +1,42 @@
+{
+  "date": "2026-04-27",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "4 scrambled eggs, half can pinto beans, 2 pieces bacon, 1 oz sweet potato",
+    "calories": 520,
+    "fat": 26.3,
+    "protein": 39.1,
+    "carbohydrates": 29.3,
+    "fiber": 7.8
+  },
+  "lunch": {
+    "mealName": "Chang's Spicy Chicken lunch special with white rice",
+    "calories": 770,
+    "fat": 27,
+    "protein": 29,
+    "carbohydrates": 83,
+    "fiber": 2
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-04-27T18:55:17Z",
+  "dailyTotal": {
+    "calories": 1290,
+    "fat": 53.3,
+    "protein": 68.1,
+    "carbohydrates": 112.3,
+    "fiber": 9.8
+  },
+  "waterOz": 22
+}

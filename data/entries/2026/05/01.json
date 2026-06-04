@@ -1,0 +1,51 @@
+{
+  "date": "2026-05-01",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "3 fried poached eggs, 1 cup greens, 2 small slices baguette, about 1 cup white beans",
+    "calories": 555,
+    "fat": 16.7,
+    "protein": 39.9,
+    "carbohydrates": 63.9,
+    "fiber": 13.0
+  },
+  "lunch": {
+    "mealName": "1 lahmajune Armenian pizza, original recipe",
+    "calories": 230,
+    "fat": 8,
+    "protein": 11,
+    "carbohydrates": 29,
+    "fiber": 2
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [
+    {
+      "mealName": "Fuji apple",
+      "calories": 149,
+      "fat": 0.5,
+      "protein": 0.4,
+      "carbohydrates": 35.8,
+      "fiber": 5.0
+    }
+  ],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-05-01T16:28:00Z",
+  "dailyTotal": {
+    "calories": 934,
+    "fat": 25.2,
+    "protein": 51.3,
+    "carbohydrates": 128.7,
+    "fiber": 20.0
+  },
+  "waterOz": 0
+}

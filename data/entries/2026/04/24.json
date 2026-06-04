@@ -1,0 +1,83 @@
+{
+  "date": "2026-04-24",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "4 fried eggs, half medium sweet potato, 6 raspberries",
+    "calories": 346,
+    "fat": 18.8,
+    "protein": 26.4,
+    "carbohydrates": 16.6,
+    "fiber": 3.5
+  },
+  "lunch": {
+    "mealName": "Sandwich with 2 slices Inked Bread Co. Timber Wolf Keto Seeds Bread, 1/2 tbsp mayonnaise, 1 pickle, lettuce, 5 slices chicken sandwich meat",
+    "calories": 195,
+    "fat": 11.5,
+    "protein": 20,
+    "carbohydrates": 24,
+    "fiber": 20
+  },
+  "dinner": {
+    "mealName": "1/4 iceberg lettuce, 1.5 chicken breasts, 1 tsp ghee, 2 tbsp blue cheese dressing",
+    "calories": 630,
+    "fat": 30,
+    "protein": 80.5,
+    "carbohydrates": 5,
+    "fiber": 1
+  },
+  "snacks": [
+    {
+      "mealName": "Large Fuji apple",
+      "calories": 149,
+      "fat": 0.5,
+      "protein": 0.4,
+      "carbohydrates": 35.8,
+      "fiber": 5.0
+    },
+    {
+      "mealName": "5 dried Turkish apricots",
+      "calories": 90,
+      "fat": 0,
+      "protein": 1,
+      "carbohydrates": 22,
+      "fiber": 3
+    },
+    {
+      "mealName": "Protein shake",
+      "calories": 328,
+      "fat": 8,
+      "protein": 40,
+      "carbohydrates": 24,
+      "fiber": 8
+    },
+    {
+      "mealName": "Large Fuji apple",
+      "calories": 149,
+      "fat": 0.5,
+      "protein": 0.4,
+      "carbohydrates": 35.8,
+      "fiber": 5.0
+    },
+    {
+      "mealName": "Date",
+      "calories": 66,
+      "fat": 0.1,
+      "protein": 0.4,
+      "carbohydrates": 18,
+      "fiber": 1.6
+    }
+  ],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-04-25T00:47:59Z",
+  "dailyTotal": {
+    "calories": 1953,
+    "fat": 69.4,
+    "protein": 169.1,
+    "carbohydrates": 181.2,
+    "fiber": 47.1
+  },
+  "waterOz": 44
+}

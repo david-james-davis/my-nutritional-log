@@ -1,0 +1,42 @@
+{
+  "date": "2026-04-29",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "5 scrambled eggs, 3 round flat breakfast sausages, small banana, medium gala apple",
+    "calories": 785,
+    "fat": 45.6,
+    "protein": 45.1,
+    "carbohydrates": 51.3,
+    "fiber": 7.0
+  },
+  "lunch": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-04-29T14:00:14Z",
+  "dailyTotal": {
+    "calories": 785,
+    "fat": 45.6,
+    "protein": 45.1,
+    "carbohydrates": 51.3,
+    "fiber": 7.0
+  },
+  "waterOz": 0
+}

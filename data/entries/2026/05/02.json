@@ -1,0 +1,42 @@
+{
+  "date": "2026-05-02",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "3-egg omelette with mozzarella cheese, country potatoes",
+    "calories": 501,
+    "fat": 29.7,
+    "protein": 28.2,
+    "carbohydrates": 29.1,
+    "fiber": 3.0
+  },
+  "lunch": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-05-02T16:19:00Z",
+  "dailyTotal": {
+    "calories": 501,
+    "fat": 29.7,
+    "protein": 28.2,
+    "carbohydrates": 29.1,
+    "fiber": 3.0
+  },
+  "waterOz": 0
+}

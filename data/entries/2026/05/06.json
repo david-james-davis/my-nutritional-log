@@ -1,0 +1,70 @@
+{
+  "date": "2026-05-06",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "1/2 small sweet potato, 4 hard boiled eggs, small Fuji apple, one banana",
+    "calories": 548,
+    "fat": 21.9,
+    "protein": 27.9,
+    "carbohydrates": 62.3,
+    "fiber": 8.6
+  },
+  "lunch": {
+    "mealName": "Chicken breast, small Fuji apple, 8 mixed nuts",
+    "calories": 414,
+    "fat": 11.3,
+    "protein": 55.2,
+    "carbohydrates": 22.5,
+    "fiber": 4.6
+  },
+  "dinner": {
+    "mealName": "Chicken breast, 1/2 small sweet potato",
+    "calories": 358,
+    "fat": 6.2,
+    "protein": 54.1,
+    "carbohydrates": 13.0,
+    "fiber": 2.3
+  },
+  "snacks": [
+    {
+      "mealName": "3 eggs, small Fuji apple",
+      "calories": 287,
+      "fat": 15.1,
+      "protein": 19.3,
+      "carbohydrates": 21.7,
+      "fiber": 3.6
+    },
+    {
+      "mealName": "Protein shake, 2 scoops",
+      "calories": 240,
+      "fat": 2.0,
+      "protein": 50.0,
+      "carbohydrates": 6.0,
+      "fiber": 2.0
+    }
+  ],
+  "exercise": [
+    {
+      "activity": "vigorous walking",
+      "durationMinutes": 30,
+      "caloriesBurned": 210
+    },
+    {
+      "activity": "moderate pace walking",
+      "durationMinutes": 60,
+      "caloriesBurned": 360
+    }
+  ],
+  "exerciseTotal": {
+    "caloriesBurned": 570
+  },
+  "updatedAt": "2026-05-07T02:23:00Z",
+  "dailyTotal": {
+    "calories": 1867,
+    "fat": 56.5,
+    "protein": 206.5,
+    "carbohydrates": 125.5,
+    "fiber": 21.1
+  },
+  "waterOz": 0
+}

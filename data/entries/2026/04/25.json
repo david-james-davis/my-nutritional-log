@@ -1,0 +1,89 @@
+{
+  "date": "2026-04-25",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "3 eggs, 1/4 cup tzatziki sauce, 10 pistachios, 1 slice wheat bread with butter",
+    "calories": 398,
+    "fat": 25.6,
+    "protein": 25.2,
+    "carbohydrates": 17.8,
+    "fiber": 3.6
+  },
+  "lunch": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "dinner": {
+    "mealName": "1/2 cup pinto beans, 1 tbsp sour cream, 1 chicken breast, 1/2 avocado, keto tortilla",
+    "calories": 807,
+    "fat": 29.6,
+    "protein": 73.1,
+    "carbohydrates": 63.1,
+    "fiber": 42.0
+  },
+  "snacks": [
+    {
+      "mealName": "1/2 chicken breast",
+      "calories": 140,
+      "fat": 3,
+      "protein": 26.5,
+      "carbohydrates": 0,
+      "fiber": 0
+    },
+    {
+      "mealName": "Large Fuji apple",
+      "calories": 149,
+      "fat": 0.5,
+      "protein": 0.4,
+      "carbohydrates": 35.8,
+      "fiber": 5.0
+    },
+    {
+      "mealName": "1/4 cup sprouted pumpkin seeds",
+      "calories": 183,
+      "fat": 15,
+      "protein": 8,
+      "carbohydrates": 3,
+      "fiber": 2
+    },
+    {
+      "mealName": "Protein shake",
+      "calories": 328,
+      "fat": 8,
+      "protein": 40,
+      "carbohydrates": 24,
+      "fiber": 8
+    },
+    {
+      "mealName": "1/4 cup mixed nuts",
+      "calories": 172,
+      "fat": 15.4,
+      "protein": 5.4,
+      "carbohydrates": 6,
+      "fiber": 2.8
+    }
+  ],
+  "exercise": [
+    {
+      "activity": "slow walking",
+      "durationMinutes": 120,
+      "caloriesBurned": 440
+    }
+  ],
+  "exerciseTotal": {
+    "caloriesBurned": 440
+  },
+  "updatedAt": "2026-04-26T02:53:37Z",
+  "dailyTotal": {
+    "calories": 2177,
+    "fat": 97.1,
+    "protein": 178.6,
+    "carbohydrates": 149.7,
+    "fiber": 63.4
+  },
+  "waterOz": 32
+}

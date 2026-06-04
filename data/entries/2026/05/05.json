@@ -1,0 +1,94 @@
+{
+  "date": "2026-05-05",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "4 oz lavash bread, 1/4 sweet potato, 5 scrambled eggs",
+    "calories": 665,
+    "fat": 24.0,
+    "protein": 48.0,
+    "carbohydrates": 71.8,
+    "fiber": 8.1
+  },
+  "lunch": {
+    "mealName": "Half chicken breast, 1/2 small sweet potato, 2 scrambled eggs with 1 tsp ghee",
+    "calories": 373,
+    "fat": 16.9,
+    "protein": 38.6,
+    "carbohydrates": 13.8,
+    "fiber": 2.0
+  },
+  "dinner": {
+    "mealName": "3 oz lavash bread, 4 hard boiled eggs",
+    "calories": 498,
+    "fat": 19.2,
+    "protein": 37.2,
+    "carbohydrates": 49.6,
+    "fiber": 5.4
+  },
+  "snacks": [
+    {
+      "mealName": "Medium Fuji apple",
+      "calories": 95,
+      "fat": 0.3,
+      "protein": 0.5,
+      "carbohydrates": 25.0,
+      "fiber": 4.4
+    },
+    {
+      "mealName": "1/4 cup Go Raw organic sprouted pumpkin seeds",
+      "calories": 180,
+      "fat": 13.0,
+      "protein": 8.0,
+      "carbohydrates": 4.0,
+      "fiber": 3.0
+    },
+    {
+      "mealName": "Protein shake, 2 scoops",
+      "calories": 240,
+      "fat": 2.0,
+      "protein": 50.0,
+      "carbohydrates": 6.0,
+      "fiber": 2.0
+    },
+    {
+      "mealName": "Small Fuji apple",
+      "calories": 77,
+      "fat": 0.2,
+      "protein": 0.4,
+      "carbohydrates": 20.5,
+      "fiber": 3.6
+    },
+    {
+      "mealName": "Honey Stinger protein bar",
+      "calories": 260,
+      "fat": 15.0,
+      "protein": 14.0,
+      "carbohydrates": 21.0,
+      "fiber": 2.0
+    }
+  ],
+  "exercise": [
+    {
+      "activity": "vigorous walking",
+      "durationMinutes": 30,
+      "caloriesBurned": 210
+    },
+    {
+      "activity": "strength workout: 3x10 kettlebell swings (70 lb), 3x10 box step-ups, 3x30 situps, 3x10 curls (50 lb)",
+      "durationMinutes": 20,
+      "caloriesBurned": 200
+    }
+  ],
+  "exerciseTotal": {
+    "caloriesBurned": 410
+  },
+  "updatedAt": "2026-05-06T02:06:00Z",
+  "dailyTotal": {
+    "calories": 2388,
+    "fat": 90.6,
+    "protein": 196.7,
+    "carbohydrates": 211.7,
+    "fiber": 30.5
+  },
+  "waterOz": 0
+}

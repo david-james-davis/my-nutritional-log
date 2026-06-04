@@ -1,0 +1,48 @@
+{
+  "date": "2026-05-07",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "5 fried eggs, 1/2 small sweet potato",
+    "calories": 405,
+    "fat": 23.5,
+    "protein": 31.7,
+    "carbohydrates": 11.0,
+    "fiber": 1.7
+  },
+  "lunch": {
+    "mealName": "Chicken breast, small Fuji apple",
+    "calories": 445,
+    "fat": 8.7,
+    "protein": 65.4,
+    "carbohydrates": 20.5,
+    "fiber": 3.6
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [],
+  "exercise": [
+    {
+      "activity": "strength workout: 3 sets of 5 reverse pullups, 3 sets of 8 lunges (70 lb), 3 sets of 30 situps",
+      "durationMinutes": 20,
+      "caloriesBurned": 200
+    }
+  ],
+  "exerciseTotal": {
+    "caloriesBurned": 200
+  },
+  "updatedAt": "2026-05-07T22:05:10Z",
+  "dailyTotal": {
+    "calories": 850,
+    "fat": 32.2,
+    "protein": 97.1,
+    "carbohydrates": 31.5,
+    "fiber": 5.3
+  },
+  "waterOz": 0
+}

@@ -1,0 +1,78 @@
+{
+  "date": "2026-04-23",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "4 fried eggs, half medium sweet potato, protein shake, one banana",
+    "calories": 766,
+    "fat": 28.1,
+    "protein": 67.5,
+    "carbohydrates": 62.6,
+    "fiber": 15.1
+  },
+  "lunch": {
+    "mealName": "5 eggs scrambled, 2 slices colby cheese, 1/2 pork sausage, 5 dried Turkish apricots",
+    "calories": 760,
+    "fat": 46.5,
+    "protein": 52.0,
+    "carbohydrates": 24.0,
+    "fiber": 2.5
+  },
+  "dinner": {
+    "mealName": "1 chicken breast, protein shake",
+    "calories": 608,
+    "fat": 14,
+    "protein": 93,
+    "carbohydrates": 24,
+    "fiber": 8
+  },
+  "snacks": [
+    {
+      "mealName": "8 oz black coffee",
+      "calories": 2,
+      "fat": 0,
+      "protein": 0,
+      "carbohydrates": 0,
+      "fiber": 0
+    },
+    {
+      "mealName": "Large Fuji apple",
+      "calories": 149,
+      "fat": 0.5,
+      "protein": 0.4,
+      "carbohydrates": 35.8,
+      "fiber": 5.0
+    },
+    {
+      "mealName": "1 pork Italian sausage",
+      "calories": 251,
+      "fat": 20,
+      "protein": 16,
+      "carbohydrates": 2,
+      "fiber": 0
+    }
+  ],
+  "exercise": [
+    {
+      "activity": "brisk walking",
+      "durationMinutes": 30,
+      "caloriesBurned": 165
+    },
+    {
+      "activity": "bodyweight workout (5x5 pull-ups, 3x30 jump rope, 2x30 situps)",
+      "durationMinutes": 20,
+      "caloriesBurned": 165
+    }
+  ],
+  "exerciseTotal": {
+    "caloriesBurned": 330
+  },
+  "updatedAt": "2026-04-24T00:47:05Z",
+  "dailyTotal": {
+    "calories": 2536,
+    "fat": 109.1,
+    "protein": 228.9,
+    "carbohydrates": 148.4,
+    "fiber": 30.6
+  },
+  "waterOz": 48
+}

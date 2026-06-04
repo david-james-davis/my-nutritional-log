@@ -1,0 +1,42 @@
+{
+  "date": "2026-04-28",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "5 eggs, 2 round flat breakfast sausages, 2 small apples",
+    "calories": 694,
+    "fat": 40.4,
+    "protein": 42.3,
+    "carbohydrates": 45.0,
+    "fiber": 7.2
+  },
+  "lunch": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-04-28T13:49:38Z",
+  "dailyTotal": {
+    "calories": 694,
+    "fat": 40.4,
+    "protein": 42.3,
+    "carbohydrates": 45.0,
+    "fiber": 7.2
+  },
+  "waterOz": 0
+}
