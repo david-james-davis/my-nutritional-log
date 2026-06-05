@@ -18,12 +18,12 @@
     "fiber": 44.5
   },
   "dinner": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "Chicken breast, medium Fuji apple",
+    "calories": 375,
+    "fat": 6.3,
+    "protein": 53.5,
+    "carbohydrates": 25,
+    "fiber": 4.4
   },
   "snacks": [
     {
@@ -55,13 +55,13 @@
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-06-04T21:05:49Z",
+  "updatedAt": "2026-06-05T00:13:34Z",
   "dailyTotal": {
-    "calories": 1799,
-    "fat": 66.2,
-    "protein": 122.9,
-    "carbohydrates": 190.7,
-    "fiber": 65.7
+    "calories": 2174,
+    "fat": 72.5,
+    "protein": 176.4,
+    "carbohydrates": 215.7,
+    "fiber": 70.1
   },
   "waterOz": 0
 }
