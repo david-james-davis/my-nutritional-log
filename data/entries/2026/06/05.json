@@ -51,11 +51,17 @@
       "fiber": 5.0
     }
   ],
-  "exercise": [],
+  "exercise": [
+    {
+      "activity": "moderate pace walking",
+      "durationMinutes": 30,
+      "caloriesBurned": 180
+    }
+  ],
   "exerciseTotal": {
-    "caloriesBurned": 0
+    "caloriesBurned": 180
   },
-  "updatedAt": "2026-06-06T01:23:31Z",
+  "updatedAt": "2026-06-06T01:25:00Z",
   "dailyTotal": {
     "calories": 1187,
     "fat": 38.7,
