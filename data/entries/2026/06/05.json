@@ -10,12 +10,12 @@
     "fiber": 5.9
   },
   "lunch": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "Ham sandwich, 4 slices ham, 1 tbsp mayonnaise, 2 slices Hero bread",
+    "calories": 280,
+    "fat": 17.4,
+    "protein": 20.1,
+    "carbohydrates": 28.3,
+    "fiber": 24.0
   },
   "dinner": {
     "mealName": "",
@@ -55,13 +55,13 @@
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-06-05T17:17:00Z",
+  "updatedAt": "2026-06-06T01:23:31Z",
   "dailyTotal": {
-    "calories": 907,
-    "fat": 21.3,
-    "protein": 27.2,
-    "carbohydrates": 150.3,
-    "fiber": 20.9
+    "calories": 1187,
+    "fat": 38.7,
+    "protein": 47.3,
+    "carbohydrates": 178.6,
+    "fiber": 44.9
   },
   "waterOz": 0
 }
