@@ -25,18 +25,43 @@
     "carbohydrates": 0,
     "fiber": 0
   },
-  "snacks": [],
+  "snacks": [
+    {
+      "mealName": "Fuji apple",
+      "calories": 149,
+      "fat": 0.5,
+      "protein": 0.4,
+      "carbohydrates": 35.8,
+      "fiber": 5.0
+    },
+    {
+      "mealName": "Fuji apple",
+      "calories": 149,
+      "fat": 0.5,
+      "protein": 0.4,
+      "carbohydrates": 35.8,
+      "fiber": 5.0
+    },
+    {
+      "mealName": "Fuji apple",
+      "calories": 149,
+      "fat": 0.5,
+      "protein": 0.4,
+      "carbohydrates": 35.8,
+      "fiber": 5.0
+    }
+  ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-06-05T17:07:08Z",
+  "updatedAt": "2026-06-05T17:17:00Z",
   "dailyTotal": {
-    "calories": 460,
-    "fat": 19.8,
-    "protein": 26.0,
-    "carbohydrates": 42.9,
-    "fiber": 5.9
+    "calories": 907,
+    "fat": 21.3,
+    "protein": 27.2,
+    "carbohydrates": 150.3,
+    "fiber": 20.9
   },
   "waterOz": 0
 }
