@@ -49,6 +49,14 @@
       "protein": 0.4,
       "carbohydrates": 35.8,
       "fiber": 5.0
+    },
+    {
+      "mealName": "Naked Pea vanilla protein shake, 4 scoops",
+      "calories": 280,
+      "fat": 5.0,
+      "protein": 50.0,
+      "carbohydrates": 16.0,
+      "fiber": 0.0
     }
   ],
   "exercise": [
@@ -66,12 +74,12 @@
   "exerciseTotal": {
     "caloriesBurned": 355
   },
-  "updatedAt": "2026-06-06T01:30:00Z",
+  "updatedAt": "2026-06-06T01:32:00Z",
   "dailyTotal": {
-    "calories": 1750,
-    "fat": 64.3,
-    "protein": 106.1,
-    "carbohydrates": 197.5,
+    "calories": 2030,
+    "fat": 69.3,
+    "protein": 156.1,
+    "carbohydrates": 213.5,
     "fiber": 51.4
   },
   "waterOz": 0
