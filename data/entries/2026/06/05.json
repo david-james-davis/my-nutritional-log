@@ -56,12 +56,17 @@
       "activity": "moderate pace walking",
       "durationMinutes": 30,
       "caloriesBurned": 180
+    },
+    {
+      "activity": "kettlebell workout: 3 sets of 3 windmills, 3 sets of 3 clean and thruster, 3 sets of overhead press, 3 sets of 5 pullups",
+      "durationMinutes": 20,
+      "caloriesBurned": 175
     }
   ],
   "exerciseTotal": {
-    "caloriesBurned": 180
+    "caloriesBurned": 355
   },
-  "updatedAt": "2026-06-06T01:26:26Z",
+  "updatedAt": "2026-06-06T01:30:00Z",
   "dailyTotal": {
     "calories": 1750,
     "fat": 64.3,
