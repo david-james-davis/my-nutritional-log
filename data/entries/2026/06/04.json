@@ -18,12 +18,12 @@
     "fiber": 44.5
   },
   "dinner": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "Chicken breast, medium Fuji apple",
+    "calories": 375,
+    "fat": 6.3,
+    "protein": 53.5,
+    "carbohydrates": 25,
+    "fiber": 4.4
   },
   "snacks": [
     {
@@ -41,19 +41,27 @@
       "protein": 51,
       "carbohydrates": 32,
       "fiber": 6
+    },
+    {
+      "mealName": "2 St. Louis ribs, no bbq sauce",
+      "calories": 260,
+      "fat": 22,
+      "protein": 16,
+      "carbohydrates": 0,
+      "fiber": 0
     }
   ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-06-04T20:09:47Z",
+  "updatedAt": "2026-06-05T00:13:34Z",
   "dailyTotal": {
-    "calories": 1539,
-    "fat": 44.2,
-    "protein": 106.9,
-    "carbohydrates": 190.7,
-    "fiber": 65.7
+    "calories": 2174,
+    "fat": 72.5,
+    "protein": 176.4,
+    "carbohydrates": 215.7,
+    "fiber": 70.1
   },
   "waterOz": 0
 }

@@ -1,0 +1,86 @@
+{
+  "date": "2026-06-05",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "4 eggs, 1/4 sweet potato, 1 Fuji apple",
+    "calories": 460,
+    "fat": 19.8,
+    "protein": 26.0,
+    "carbohydrates": 42.9,
+    "fiber": 5.9
+  },
+  "lunch": {
+    "mealName": "Ham sandwich, 4 slices ham, 1 tbsp mayonnaise, 2 slices Hero bread",
+    "calories": 280,
+    "fat": 17.4,
+    "protein": 20.1,
+    "carbohydrates": 28.3,
+    "fiber": 24.0
+  },
+  "dinner": {
+    "mealName": "1/2 cup hummus, handful of arugula with 1 tbsp Caesar dressing, 1 chicken breast",
+    "calories": 563,
+    "fat": 25.6,
+    "protein": 58.8,
+    "carbohydrates": 18.9,
+    "fiber": 6.5
+  },
+  "snacks": [
+    {
+      "mealName": "Fuji apple",
+      "calories": 149,
+      "fat": 0.5,
+      "protein": 0.4,
+      "carbohydrates": 35.8,
+      "fiber": 5.0
+    },
+    {
+      "mealName": "Fuji apple",
+      "calories": 149,
+      "fat": 0.5,
+      "protein": 0.4,
+      "carbohydrates": 35.8,
+      "fiber": 5.0
+    },
+    {
+      "mealName": "Fuji apple",
+      "calories": 149,
+      "fat": 0.5,
+      "protein": 0.4,
+      "carbohydrates": 35.8,
+      "fiber": 5.0
+    },
+    {
+      "mealName": "Naked Pea vanilla protein shake, 4 scoops",
+      "calories": 280,
+      "fat": 5.0,
+      "protein": 50.0,
+      "carbohydrates": 16.0,
+      "fiber": 0.0
+    }
+  ],
+  "exercise": [
+    {
+      "activity": "moderate pace walking",
+      "durationMinutes": 30,
+      "caloriesBurned": 180
+    },
+    {
+      "activity": "kettlebell workout: 3 sets of 3 windmills, 3 sets of 3 clean and thruster, 3 sets of overhead press, 3 sets of 5 pullups",
+      "durationMinutes": 20,
+      "caloriesBurned": 175
+    }
+  ],
+  "exerciseTotal": {
+    "caloriesBurned": 355
+  },
+  "updatedAt": "2026-06-06T01:32:00Z",
+  "dailyTotal": {
+    "calories": 2030,
+    "fat": 69.3,
+    "protein": 156.1,
+    "carbohydrates": 213.5,
+    "fiber": 51.4
+  },
+  "waterOz": 0
+}
