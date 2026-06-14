@@ -41,19 +41,27 @@
       "protein": 18.0,
       "carbohydrates": 23.0,
       "fiber": 20.0
+    },
+    {
+      "mealName": "4 scoop pea protein shake with 1 Honeycrisp apple",
+      "calories": 375,
+      "fat": 5.3,
+      "protein": 50.5,
+      "carbohydrates": 41.0,
+      "fiber": 4.4
     }
   ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-06-14T20:12:39Z",
+  "updatedAt": "2026-06-14T20:57:43Z",
   "dailyTotal": {
-    "calories": 962,
-    "fat": 41.4,
-    "protein": 44.9,
-    "carbohydrates": 108.1,
-    "fiber": 32.0
+    "calories": 1337,
+    "fat": 46.7,
+    "protein": 95.4,
+    "carbohydrates": 149.1,
+    "fiber": 36.4
   },
   "waterOz": 0
 }
