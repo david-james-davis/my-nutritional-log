@@ -49,17 +49,25 @@
       "protein": 50.5,
       "carbohydrates": 41.0,
       "fiber": 4.4
+    },
+    {
+      "mealName": "Season sardines in olive oil, about 1 teaspoon of the oil consumed",
+      "calories": 240,
+      "fat": 17.0,
+      "protein": 22.0,
+      "carbohydrates": 0.0,
+      "fiber": 0.0
     }
   ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-06-14T20:57:43Z",
+  "updatedAt": "2026-06-14T21:01:00Z",
   "dailyTotal": {
-    "calories": 1337,
-    "fat": 46.7,
-    "protein": 95.4,
+    "calories": 1577,
+    "fat": 63.7,
+    "protein": 117.4,
     "carbohydrates": 149.1,
     "fiber": 36.4
   },
