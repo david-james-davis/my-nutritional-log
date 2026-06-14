@@ -1,0 +1,42 @@
+{
+  "date": "2026-06-14",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "4 fried eggs, 1/2 sweet potato",
+    "calories": 420,
+    "fat": 27.4,
+    "protein": 26.1,
+    "carbohydrates": 13.5,
+    "fiber": 2.0
+  },
+  "lunch": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-06-14T20:07:00Z",
+  "dailyTotal": {
+    "calories": 420,
+    "fat": 27.4,
+    "protein": 26.1,
+    "carbohydrates": 13.5,
+    "fiber": 2.0
+  },
+  "waterOz": 0
+}
