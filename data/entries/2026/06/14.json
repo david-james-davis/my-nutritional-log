@@ -33,19 +33,27 @@
       "protein": 0.8,
       "carbohydrates": 71.6,
       "fiber": 10.0
+    },
+    {
+      "mealName": "Ham sandwich with 4 slices black forest ham, 1 tbsp mayonnaise, on Inked Timber Wolf keto seeded bread",
+      "calories": 244,
+      "fat": 13.0,
+      "protein": 18.0,
+      "carbohydrates": 23.0,
+      "fiber": 20.0
     }
   ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-06-14T20:10:34Z",
+  "updatedAt": "2026-06-14T20:12:39Z",
   "dailyTotal": {
-    "calories": 718,
-    "fat": 28.4,
-    "protein": 26.9,
-    "carbohydrates": 85.1,
-    "fiber": 12.0
+    "calories": 962,
+    "fat": 41.4,
+    "protein": 44.9,
+    "carbohydrates": 108.1,
+    "fiber": 32.0
   },
   "waterOz": 0
 }
