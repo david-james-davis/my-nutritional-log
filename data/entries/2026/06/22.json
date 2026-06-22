@@ -1,0 +1,42 @@
+{
+  "date": "2026-06-22",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "4 fried eggs, 4 oz steak, 1/2 sweet potato",
+    "calories": 649,
+    "fat": 36.4,
+    "protein": 61.1,
+    "carbohydrates": 13.5,
+    "fiber": 2.0
+  },
+  "lunch": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-06-22T16:12:47Z",
+  "dailyTotal": {
+    "calories": 649,
+    "fat": 36.4,
+    "protein": 61.1,
+    "carbohydrates": 13.5,
+    "fiber": 2.0
+  },
+  "waterOz": 0
+}
