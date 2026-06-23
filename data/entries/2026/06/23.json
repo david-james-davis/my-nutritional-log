@@ -10,12 +10,12 @@
     "fiber": 6.4
   },
   "lunch": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "3/4 cup cooked bulgar with two teaspoons of ghee, and one and a half chicken breasts",
+    "calories": 623,
+    "fat": 19.3,
+    "protein": 83.8,
+    "carbohydrates": 25.4,
+    "fiber": 6.2
   },
   "dinner": {
     "mealName": "",
@@ -30,13 +30,13 @@
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-06-23T20:07:31Z",
+  "updatedAt": "2026-06-23T20:16:51Z",
   "dailyTotal": {
-    "calories": 687,
-    "fat": 34.6,
-    "protein": 52.1,
-    "carbohydrates": 38.6,
-    "fiber": 6.4
+    "calories": 1310,
+    "fat": 53.9,
+    "protein": 135.9,
+    "carbohydrates": 64.0,
+    "fiber": 12.6
   },
   "waterOz": 0
 }
