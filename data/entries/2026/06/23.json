@@ -25,18 +25,27 @@
     "carbohydrates": 0,
     "fiber": 0
   },
-  "snacks": [],
+  "snacks": [
+    {
+      "mealName": "1 Honeycrisp apple",
+      "calories": 95,
+      "fat": 0.3,
+      "protein": 0.5,
+      "carbohydrates": 25.1,
+      "fiber": 4.4
+    }
+  ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-06-23T20:16:51Z",
+  "updatedAt": "2026-06-23T20:19:51Z",
   "dailyTotal": {
-    "calories": 1310,
-    "fat": 53.9,
-    "protein": 135.9,
-    "carbohydrates": 64.0,
-    "fiber": 12.6
+    "calories": 1405,
+    "fat": 54.2,
+    "protein": 136.4,
+    "carbohydrates": 89.1,
+    "fiber": 17.0
   },
   "waterOz": 0
 }
