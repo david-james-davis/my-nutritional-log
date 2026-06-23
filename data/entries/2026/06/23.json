@@ -1,0 +1,42 @@
+{
+  "date": "2026-06-23",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "3 oz steak, 4 fried eggs, a gala apple, and 1/2 sweet potato",
+    "calories": 687,
+    "fat": 34.6,
+    "protein": 52.1,
+    "carbohydrates": 38.6,
+    "fiber": 6.4
+  },
+  "lunch": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-06-23T20:07:31Z",
+  "dailyTotal": {
+    "calories": 687,
+    "fat": 34.6,
+    "protein": 52.1,
+    "carbohydrates": 38.6,
+    "fiber": 6.4
+  },
+  "waterOz": 0
+}
