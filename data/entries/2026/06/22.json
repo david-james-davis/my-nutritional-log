@@ -25,6 +25,14 @@
       "protein": 0.5,
       "carbohydrates": 25.1,
       "fiber": 4.4
+    },
+    {
+      "mealName": "Chobani high protein nonfat yogurt with 1 tbsp honey, 3 tbsp chia seeds, and 1/4 cup blueberries",
+      "calories": 350,
+      "fat": 11.1,
+      "protein": 22.3,
+      "carbohydrates": 43.0,
+      "fiber": 13.0
     }
   ],
   "dinner": {
@@ -39,13 +47,13 @@
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-06-23T02:06:57Z",
+  "updatedAt": "2026-06-23T02:10:00Z",
   "dailyTotal": {
-    "calories": 1238,
-    "fat": 73.7,
-    "protein": 94.6,
-    "carbohydrates": 46.4,
-    "fiber": 7.7
+    "calories": 1588,
+    "fat": 84.8,
+    "protein": 116.9,
+    "carbohydrates": 89.4,
+    "fiber": 20.7
   },
   "waterOz": 0
 }
