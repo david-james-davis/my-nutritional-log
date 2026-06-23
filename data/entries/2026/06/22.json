@@ -33,6 +33,14 @@
       "protein": 22.3,
       "carbohydrates": 43.0,
       "fiber": 13.0
+    },
+    {
+      "mealName": "4 scoop pea protein shake",
+      "calories": 280,
+      "fat": 4.8,
+      "protein": 50.0,
+      "carbohydrates": 15.9,
+      "fiber": 0.0
     }
   ],
   "dinner": {
@@ -58,12 +66,12 @@
   "exerciseTotal": {
     "caloriesBurned": 540
   },
-  "updatedAt": "2026-06-23T02:15:00Z",
+  "updatedAt": "2026-06-23T02:18:00Z",
   "dailyTotal": {
-    "calories": 2039,
-    "fat": 111.8,
-    "protein": 145.9,
-    "carbohydrates": 127.4,
+    "calories": 2319,
+    "fat": 116.6,
+    "protein": 195.9,
+    "carbohydrates": 143.3,
     "fiber": 30.7
   },
   "waterOz": 0
