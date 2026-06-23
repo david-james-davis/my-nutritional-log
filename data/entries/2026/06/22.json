@@ -43,11 +43,22 @@
     "carbohydrates": 38.0,
     "fiber": 10.0
   },
-  "exercise": [],
+  "exercise": [
+    {
+      "activity": "vigorous walking",
+      "durationMinutes": 60,
+      "caloriesBurned": 420
+    },
+    {
+      "activity": "3 sets of 30 pushups and 3 sets of 10 ab roller",
+      "durationMinutes": 20,
+      "caloriesBurned": 120
+    }
+  ],
   "exerciseTotal": {
-    "caloriesBurned": 0
+    "caloriesBurned": 540
   },
-  "updatedAt": "2026-06-23T02:12:00Z",
+  "updatedAt": "2026-06-23T02:15:00Z",
   "dailyTotal": {
     "calories": 2039,
     "fat": 111.8,
