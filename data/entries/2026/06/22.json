@@ -36,24 +36,24 @@
     }
   ],
   "dinner": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "sandwich with 4 oz tri-tip steak, Inked keto seeded bread, 1 tbsp mayonnaise, and 2 tbsp Kinder's hickory BBQ sauce",
+    "calories": 451,
+    "fat": 27.0,
+    "protein": 29.0,
+    "carbohydrates": 38.0,
+    "fiber": 10.0
   },
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-06-23T02:10:00Z",
+  "updatedAt": "2026-06-23T02:12:00Z",
   "dailyTotal": {
-    "calories": 1588,
-    "fat": 84.8,
-    "protein": 116.9,
-    "carbohydrates": 89.4,
-    "fiber": 20.7
+    "calories": 2039,
+    "fat": 111.8,
+    "protein": 145.9,
+    "carbohydrates": 127.4,
+    "fiber": 30.7
   },
   "waterOz": 0
 }
