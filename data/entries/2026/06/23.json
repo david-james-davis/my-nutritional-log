@@ -18,12 +18,12 @@
     "fiber": 6.2
   },
   "dinner": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "1 chicken breast with bbq sauce",
+    "calories": 340,
+    "fat": 6.0,
+    "protein": 53.0,
+    "carbohydrates": 15.0,
+    "fiber": 0.0
   },
   "snacks": [
     {
@@ -47,12 +47,12 @@
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-06-24T01:25:03Z",
+  "updatedAt": "2026-06-24T01:26:50Z",
   "dailyTotal": {
-    "calories": 1595,
-    "fat": 54.8,
-    "protein": 137.4,
-    "carbohydrates": 139.3,
+    "calories": 1935,
+    "fat": 60.8,
+    "protein": 190.4,
+    "carbohydrates": 154.3,
     "fiber": 25.8
   },
   "waterOz": 0
