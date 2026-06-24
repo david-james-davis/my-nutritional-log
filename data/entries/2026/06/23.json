@@ -33,19 +33,27 @@
       "protein": 0.5,
       "carbohydrates": 25.1,
       "fiber": 4.4
+    },
+    {
+      "mealName": "2 Honeycrisp apples",
+      "calories": 190,
+      "fat": 0.6,
+      "protein": 1.0,
+      "carbohydrates": 50.2,
+      "fiber": 8.8
     }
   ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-06-23T20:19:51Z",
+  "updatedAt": "2026-06-24T01:25:03Z",
   "dailyTotal": {
-    "calories": 1405,
-    "fat": 54.2,
-    "protein": 136.4,
-    "carbohydrates": 89.1,
-    "fiber": 17.0
+    "calories": 1595,
+    "fat": 54.8,
+    "protein": 137.4,
+    "carbohydrates": 139.3,
+    "fiber": 25.8
   },
   "waterOz": 0
 }
