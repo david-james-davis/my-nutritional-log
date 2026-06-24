@@ -41,19 +41,27 @@
       "protein": 1.0,
       "carbohydrates": 50.2,
       "fiber": 8.8
+    },
+    {
+      "mealName": "3/4 cup Chobani yogurt with 3 tbsp chia seeds and 2 tbsp honey",
+      "calories": 442,
+      "fat": 14.1,
+      "protein": 25.7,
+      "carbohydrates": 57.0,
+      "fiber": 14.7
     }
   ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-06-24T01:26:50Z",
+  "updatedAt": "2026-06-24T02:10:36Z",
   "dailyTotal": {
-    "calories": 1935,
-    "fat": 60.8,
-    "protein": 190.4,
-    "carbohydrates": 154.3,
-    "fiber": 25.8
+    "calories": 2377,
+    "fat": 74.9,
+    "protein": 216.1,
+    "carbohydrates": 211.3,
+    "fiber": 40.5
   },
   "waterOz": 0
 }
