@@ -10,12 +10,12 @@
     "fiber": 2.0
   },
   "lunch": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "Sandwich with 2 slices Inked Bread Co. Timber Wolf Keto Seeds Bread, mustard, and 2 slices turkey",
+    "calories": 123,
+    "fat": 4.3,
+    "protein": 11.0,
+    "carbohydrates": 23.0,
+    "fiber": 20.0
   },
   "dinner": {
     "mealName": "",
@@ -33,19 +33,27 @@
       "protein": 7.2,
       "carbohydrates": 8.0,
       "fiber": 3.7
+    },
+    {
+      "mealName": "Large Fuji apple",
+      "calories": 149,
+      "fat": 0.5,
+      "protein": 0.4,
+      "carbohydrates": 35.8,
+      "fiber": 5.0
     }
   ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-06-26T21:55:30Z",
+  "updatedAt": "2026-06-26T23:35:49Z",
   "dailyTotal": {
-    "calories": 649,
-    "fat": 47.9,
-    "protein": 33.3,
-    "carbohydrates": 21.5,
-    "fiber": 5.7
+    "calories": 921,
+    "fat": 52.7,
+    "protein": 44.7,
+    "carbohydrates": 80.3,
+    "fiber": 30.7
   },
   "waterOz": 0
 }
