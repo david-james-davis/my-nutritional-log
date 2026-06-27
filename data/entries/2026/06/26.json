@@ -18,12 +18,12 @@
     "fiber": 20.0
   },
   "dinner": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "1 cup cooked ground beef, 1/2 cup rice, and 1/2 cup green peas",
+    "calories": 504,
+    "fat": 23.3,
+    "protein": 37.3,
+    "carbohydrates": 33.3,
+    "fiber": 4.3
   },
   "snacks": [
     {
@@ -61,13 +61,13 @@
   "exerciseTotal": {
     "caloriesBurned": 210
   },
-  "updatedAt": "2026-06-27T01:08:09Z",
+  "updatedAt": "2026-06-27T01:19:07Z",
   "dailyTotal": {
-    "calories": 1171,
-    "fat": 67.6,
-    "protein": 62.7,
-    "carbohydrates": 104.3,
-    "fiber": 50.7
+    "calories": 1675,
+    "fat": 90.9,
+    "protein": 100.0,
+    "carbohydrates": 137.6,
+    "fiber": 55.0
   },
   "waterOz": 0
 }
