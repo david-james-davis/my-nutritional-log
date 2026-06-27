@@ -49,6 +49,14 @@
       "protein": 18.0,
       "carbohydrates": 24.0,
       "fiber": 20.0
+    },
+    {
+      "mealName": "Large Fuji apple",
+      "calories": 149,
+      "fat": 0.5,
+      "protein": 0.4,
+      "carbohydrates": 35.8,
+      "fiber": 5.0
     }
   ],
   "exercise": [
@@ -61,13 +69,13 @@
   "exerciseTotal": {
     "caloriesBurned": 210
   },
-  "updatedAt": "2026-06-27T01:19:07Z",
+  "updatedAt": "2026-06-27T01:43:29Z",
   "dailyTotal": {
-    "calories": 1675,
-    "fat": 90.9,
-    "protein": 100.0,
-    "carbohydrates": 137.6,
-    "fiber": 55.0
+    "calories": 1824,
+    "fat": 91.4,
+    "protein": 100.4,
+    "carbohydrates": 173.4,
+    "fiber": 60.0
   },
   "waterOz": 0
 }
