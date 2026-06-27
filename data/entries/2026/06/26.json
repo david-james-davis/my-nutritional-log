@@ -41,19 +41,27 @@
       "protein": 0.4,
       "carbohydrates": 35.8,
       "fiber": 5.0
+    },
+    {
+      "mealName": "Sandwich with 2 slices Inked Bread Co. Timber Wolf Keto Seeds Bread, 1 tbsp mayonnaise, and 4 slices turkey",
+      "calories": 250,
+      "fat": 14.9,
+      "protein": 18.0,
+      "carbohydrates": 24.0,
+      "fiber": 20.0
     }
   ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-06-26T23:35:49Z",
+  "updatedAt": "2026-06-27T01:06:13Z",
   "dailyTotal": {
-    "calories": 921,
-    "fat": 52.7,
-    "protein": 44.7,
-    "carbohydrates": 80.3,
-    "fiber": 30.7
+    "calories": 1171,
+    "fat": 67.6,
+    "protein": 62.7,
+    "carbohydrates": 104.3,
+    "fiber": 50.7
   },
   "waterOz": 0
 }
