@@ -1,0 +1,42 @@
+{
+  "date": "2026-06-29",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "4 fried eggs, a Fuji apple, and a banana",
+    "calories": 565,
+    "fat": 20.7,
+    "protein": 26.9,
+    "carbohydrates": 63.9,
+    "fiber": 8.1
+  },
+  "lunch": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-06-29T16:42:24Z",
+  "dailyTotal": {
+    "calories": 565,
+    "fat": 20.7,
+    "protein": 26.9,
+    "carbohydrates": 63.9,
+    "fiber": 8.1
+  },
+  "waterOz": 0
+}
