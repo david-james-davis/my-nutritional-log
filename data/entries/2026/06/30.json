@@ -41,18 +41,26 @@
       "protein": 0.5,
       "carbohydrates": 25.0,
       "fiber": 4.4
+    },
+    {
+      "mealName": "Naked brand pea protein shake",
+      "calories": 280,
+      "fat": 5.0,
+      "protein": 40.0,
+      "carbohydrates": 16.0,
+      "fiber": 0
     }
   ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-06-30T20:30:09Z",
+  "updatedAt": "2026-06-30T20:31:33Z",
   "dailyTotal": {
-    "calories": 1414,
-    "fat": 62.6,
-    "protein": 63.2,
-    "carbohydrates": 154.6,
+    "calories": 1694,
+    "fat": 67.6,
+    "protein": 103.2,
+    "carbohydrates": 170.6,
     "fiber": 29.9
   },
   "waterOz": 0
