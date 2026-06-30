@@ -25,18 +25,27 @@
     "carbohydrates": 0,
     "fiber": 0
   },
-  "snacks": [],
+  "snacks": [
+    {
+      "mealName": "Fuji apple and a banana",
+      "calories": 248,
+      "fat": 0.8,
+      "protein": 1.7,
+      "carbohydrates": 60.6,
+      "fiber": 8.1
+    }
+  ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-06-30T18:33:52Z",
+  "updatedAt": "2026-06-30T18:37:52Z",
   "dailyTotal": {
-    "calories": 1071,
-    "fat": 61.5,
-    "protein": 61.0,
-    "carbohydrates": 69.0,
-    "fiber": 17.4
+    "calories": 1319,
+    "fat": 62.3,
+    "protein": 62.7,
+    "carbohydrates": 129.6,
+    "fiber": 25.5
   },
   "waterOz": 0
 }
