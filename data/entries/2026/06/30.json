@@ -33,19 +33,27 @@
       "protein": 1.7,
       "carbohydrates": 60.6,
       "fiber": 8.1
+    },
+    {
+      "mealName": "Apple",
+      "calories": 95,
+      "fat": 0.3,
+      "protein": 0.5,
+      "carbohydrates": 25.0,
+      "fiber": 4.4
     }
   ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-06-30T18:37:52Z",
+  "updatedAt": "2026-06-30T20:30:09Z",
   "dailyTotal": {
-    "calories": 1319,
-    "fat": 62.3,
-    "protein": 62.7,
-    "carbohydrates": 129.6,
-    "fiber": 25.5
+    "calories": 1414,
+    "fat": 62.6,
+    "protein": 63.2,
+    "carbohydrates": 154.6,
+    "fiber": 29.9
   },
   "waterOz": 0
 }
