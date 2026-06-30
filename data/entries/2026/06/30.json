@@ -10,12 +10,12 @@
     "fiber": 2.9
   },
   "lunch": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "Quarter pound ground beef patty, a cup of garbanzo beans, and a quarter cup of hummus",
+    "calories": 656,
+    "fat": 33.8,
+    "protein": 36.0,
+    "carbohydrates": 50.0,
+    "fiber": 14.5
   },
   "dinner": {
     "mealName": "",
@@ -30,13 +30,13 @@
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-06-30T18:00:00Z",
+  "updatedAt": "2026-06-30T18:33:52Z",
   "dailyTotal": {
-    "calories": 415,
-    "fat": 27.7,
-    "protein": 25.0,
-    "carbohydrates": 19.0,
-    "fiber": 2.9
+    "calories": 1071,
+    "fat": 61.5,
+    "protein": 61.0,
+    "carbohydrates": 69.0,
+    "fiber": 17.4
   },
   "waterOz": 0
 }
