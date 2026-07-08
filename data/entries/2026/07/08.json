@@ -1,0 +1,51 @@
+{
+  "date": "2026-07-08",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "4 fried eggs, a quarter sweet potato, and a large Fuji apple",
+    "calories": 516,
+    "fat": 27.4,
+    "protein": 25.5,
+    "carbohydrates": 53.4,
+    "fiber": 10.4
+  },
+  "lunch": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [
+    {
+      "mealName": "Banana and one tablespoon of Kirkland's mixed nuts butter",
+      "calories": 205,
+      "fat": 8.9,
+      "protein": 6.7,
+      "carbohydrates": 30.0,
+      "fiber": 5.5
+    }
+  ],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-07-08T17:33:00Z",
+  "dailyTotal": {
+    "calories": 721,
+    "fat": 36.3,
+    "protein": 32.2,
+    "carbohydrates": 83.4,
+    "fiber": 15.9
+  },
+  "waterOz": 0
+}
