@@ -10,12 +10,12 @@
     "fiber": 10.4
   },
   "lunch": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "Sandwich with two slices of Hero seeded bread, four slices of turkey, and one tablespoon of avocado mayonnaise",
+    "calories": 340,
+    "fat": 18.5,
+    "protein": 36.0,
+    "carbohydrates": 28.0,
+    "fiber": 24.0
   },
   "dinner": {
     "mealName": "",
@@ -39,13 +39,13 @@
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-07-08T17:33:00Z",
+  "updatedAt": "2026-07-08T18:46:00Z",
   "dailyTotal": {
-    "calories": 721,
-    "fat": 36.3,
-    "protein": 32.2,
-    "carbohydrates": 83.4,
-    "fiber": 15.9
+    "calories": 1061,
+    "fat": 54.8,
+    "protein": 68.2,
+    "carbohydrates": 111.4,
+    "fiber": 39.9
   },
   "waterOz": 0
 }
