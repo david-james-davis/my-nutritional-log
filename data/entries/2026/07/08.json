@@ -41,19 +41,27 @@
       "protein": 0.5,
       "carbohydrates": 25.0,
       "fiber": 4.4
+    },
+    {
+      "mealName": "Half cup dried jackfruit",
+      "calories": 150,
+      "fat": 0,
+      "protein": 0,
+      "carbohydrates": 24,
+      "fiber": 12
     }
   ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-07-08T20:38:00Z",
+  "updatedAt": "2026-07-08T21:46:00Z",
   "dailyTotal": {
-    "calories": 1156,
+    "calories": 1306,
     "fat": 55.1,
     "protein": 68.7,
-    "carbohydrates": 136.4,
-    "fiber": 44.3
+    "carbohydrates": 160.4,
+    "fiber": 56.3
   },
   "waterOz": 0
 }
