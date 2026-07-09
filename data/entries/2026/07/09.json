@@ -43,11 +43,17 @@
       "fiber": 0.0
     }
   ],
-  "exercise": [],
+  "exercise": [
+    {
+      "activity": "vigorous walking",
+      "durationMinutes": 30,
+      "caloriesBurned": 210
+    }
+  ],
   "exerciseTotal": {
-    "caloriesBurned": 0
+    "caloriesBurned": 210
   },
-  "updatedAt": "2026-07-09T21:51:00Z",
+  "updatedAt": "2026-07-09T21:59:00Z",
   "dailyTotal": {
     "calories": 1306,
     "fat": 45.7,
