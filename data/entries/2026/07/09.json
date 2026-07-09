@@ -1,0 +1,51 @@
+{
+  "date": "2026-07-09",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "4 fried eggs and a half sweet potato",
+    "calories": 420,
+    "fat": 27.4,
+    "protein": 26.1,
+    "carbohydrates": 13.5,
+    "fiber": 2.0
+  },
+  "lunch": {
+    "mealName": "Sandwich with Hero bread, 3 slices turkey, and 1 tablespoon avocado mayonnaise",
+    "calories": 320,
+    "fat": 15.0,
+    "protein": 19.0,
+    "carbohydrates": 26.0,
+    "fiber": 18.0
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [
+    {
+      "mealName": "2 bananas and 1 Fuji apple",
+      "calories": 359,
+      "fat": 1.3,
+      "protein": 3.0,
+      "carbohydrates": 89.8,
+      "fiber": 11.2
+    }
+  ],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-07-09T21:45:00Z",
+  "dailyTotal": {
+    "calories": 1099,
+    "fat": 43.7,
+    "protein": 48.1,
+    "carbohydrates": 129.3,
+    "fiber": 31.2
+  },
+  "waterOz": 0
+}
