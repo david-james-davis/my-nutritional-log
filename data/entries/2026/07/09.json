@@ -33,18 +33,26 @@
       "protein": 3.0,
       "carbohydrates": 89.8,
       "fiber": 11.2
+    },
+    {
+      "mealName": "1 cup nonfat yogurt with 16 grams carbs, 16 grams protein, and 25 grams Naked Pea Protein powder",
+      "calories": 207,
+      "fat": 2.0,
+      "protein": 40.0,
+      "carbohydrates": 16.0,
+      "fiber": 0.0
     }
   ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-07-09T21:45:00Z",
+  "updatedAt": "2026-07-09T21:51:00Z",
   "dailyTotal": {
-    "calories": 1099,
-    "fat": 43.7,
-    "protein": 48.1,
-    "carbohydrates": 129.3,
+    "calories": 1306,
+    "fat": 45.7,
+    "protein": 88.1,
+    "carbohydrates": 145.3,
     "fiber": 31.2
   },
   "waterOz": 0
