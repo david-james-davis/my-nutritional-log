@@ -18,12 +18,12 @@
     "fiber": 18.0
   },
   "dinner": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "1.5 chicken breasts, 2 teaspoons olive oil, 1/2 cup rice, and 1/2 cup hummus",
+    "calories": 631,
+    "fat": 30.4,
+    "protein": 57.1,
+    "carbohydrates": 36.3,
+    "fiber": 8.0
   },
   "snacks": [
     {
@@ -53,13 +53,13 @@
   "exerciseTotal": {
     "caloriesBurned": 210
   },
-  "updatedAt": "2026-07-09T21:59:00Z",
+  "updatedAt": "2026-07-09T22:02:00Z",
   "dailyTotal": {
-    "calories": 1306,
-    "fat": 45.7,
-    "protein": 88.1,
-    "carbohydrates": 145.3,
-    "fiber": 31.2
+    "calories": 1937,
+    "fat": 76.1,
+    "protein": 145.2,
+    "carbohydrates": 181.6,
+    "fiber": 39.2
   },
   "waterOz": 0
 }
