@@ -114,6 +114,55 @@ def build_chart_data(entries):
     return all_days
 
 
+def summarize_weekly_trends(entries):
+    """Summarize the latest 7 logged days to spot the biggest stall driver."""
+    recent = entries[-7:]
+    if not recent:
+        return None
+
+    totals = defaultdict(float)
+    count = 0
+    for entry in recent:
+        total = entry.get("dailyTotal", {})
+        if not total:
+            continue
+        count += 1
+        totals["calories"] += total.get("calories", 0)
+        totals["protein"] += total.get("protein", 0)
+        totals["fat"] += total.get("fat", 0)
+        totals["carbs"] += total.get("carbohydrates", 0)
+        totals["fiber"] += total.get("fiber", 0)
+        totals["burned"] += entry.get("exerciseTotal", {}).get("caloriesBurned", 0)
+
+    if not count:
+        return None
+
+    averages = {key: round(val / count, 1) for key, val in totals.items()}
+    avg_net = round((totals["calories"] - totals["burned"]) / count, 1)
+    calorie_gap = round(averages["calories"] - GOALS["calories"], 1)
+    fat_gap = round(averages["fat"] - GOALS["fat"], 1)
+    carb_gap = round(averages["carbs"] - GOALS["carbs"], 1)
+
+    if calorie_gap > 0:
+        driver = "average calories are above target"
+    elif fat_gap > 10:
+        driver = "fat is running well above target"
+    elif carb_gap > 20:
+        driver = "carbs are meaningfully above target"
+    else:
+        driver = "intake looks reasonably close, so consistency matters more than macro panic"
+
+    return {
+        "days": count,
+        "averages": averages,
+        "avg_net": avg_net,
+        "calorie_gap": calorie_gap,
+        "fat_gap": fat_gap,
+        "carb_gap": carb_gap,
+        "driver": driver,
+    }
+
+
 def exercise_rows(activities):
     rows = ""
     for a in activities:
@@ -272,6 +321,37 @@ def render_history_tab(entries):
             <td>{fmt_num(fiber)}</td>
           </tr>"""
 
+    weekly = summarize_weekly_trends(entries)
+    weekly_section = ""
+    if weekly:
+        avg = weekly["averages"]
+        weekly_section = f"""
+      <div class="chart-section">
+        <h3>Weekly Trend Check</h3>
+        <div class="weekly-grid">
+          <div class="weekly-card">
+            <div class="weekly-value">{avg['calories']:g}</div>
+            <div class="weekly-label">Avg calories</div>
+          </div>
+          <div class="weekly-card">
+            <div class="weekly-value">{avg['fat']:g}g</div>
+            <div class="weekly-label">Avg fat</div>
+          </div>
+          <div class="weekly-card">
+            <div class="weekly-value">{avg['carbs']:g}g</div>
+            <div class="weekly-label">Avg carbs</div>
+          </div>
+          <div class="weekly-card">
+            <div class="weekly-value">{weekly['avg_net']:g}</div>
+            <div class="weekly-label">Avg net calories</div>
+          </div>
+        </div>
+        <p class="weekly-summary">
+          Over the last {weekly['days']} logged days, {weekly['driver']}.
+          Average calories were {weekly['calorie_gap']:+g} kcal vs target, fat was {weekly['fat_gap']:+g} g vs target, and carbs were {weekly['carb_gap']:+g} g vs target.
+        </p>
+      </div>"""
+
     return f"""
       <h2>Historical Data</h2>
 
@@ -279,6 +359,8 @@ def render_history_tab(entries):
         <h3>Daily Calories</h3>
         <div class="chart-wrap" style="height:300px"><canvas id="chartHistory"></canvas></div>
       </div>
+
+      {weekly_section}
 
       <h3 style="margin-top:2rem">All Entries</h3>
       <div class="table-wrap">
@@ -488,10 +570,16 @@ def generate_html(entries):
     .goals-approach-list li {{ padding: 0.5rem 0; border-bottom: 1px solid #f0f0f0; font-size: 0.9rem; color: #444; padding-left: 1.2rem; position: relative; }}
     .goals-approach-list li::before {{ content: "→"; position: absolute; left: 0; color: #27ae60; font-weight: 700; }}
     .goals-approach-list li:last-child {{ border-bottom: none; }}
+    .weekly-grid {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-bottom: 1rem; }}
+    .weekly-card {{ background: #f7f9fc; border-radius: 8px; padding: 0.9rem 0.75rem; text-align: center; }}
+    .weekly-value {{ font-size: 1.35rem; font-weight: 700; line-height: 1; color: #2c3e50; }}
+    .weekly-label {{ font-size: 0.7rem; color: #888; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.35rem; }}
+    .weekly-summary {{ font-size: 0.9rem; color: #444; line-height: 1.5; }}
     @media (max-width: 600px) {{
       .goals-two-col {{ grid-template-columns: 1fr; gap: 1rem; }}
       .goals-stat-grid {{ grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }}
       .goals-stat-value {{ font-size: 1.1rem; }}
+      .weekly-grid {{ grid-template-columns: repeat(2, 1fr); }}
     }}
   </style>
 </head>
