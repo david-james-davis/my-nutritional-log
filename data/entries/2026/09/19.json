@@ -1,0 +1,42 @@
+{
+  "date": "2026-09-19",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "1 cup oatmeal and 1/2 tablespoon butter",
+    "calories": 217,
+    "fat": 9.3,
+    "protein": 6,
+    "carbohydrates": 28.1,
+    "fiber": 4
+  },
+  "lunch": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-09-19T15:52:00Z",
+  "dailyTotal": {
+    "calories": 217,
+    "fat": 9.3,
+    "protein": 6,
+    "carbohydrates": 28.1,
+    "fiber": 4
+  },
+  "waterOz": 0
+}
