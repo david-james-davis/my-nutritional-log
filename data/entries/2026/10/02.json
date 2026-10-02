@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-02",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "5 fried eggs and a half sweet potato",
+    "calories": 490,
+    "fat": 32.4,
+    "protein": 32.4,
+    "carbohydrates": 13.9,
+    "fiber": 2.0
+  },
+  "lunch": {
+    "mealName": "2 sandwiches with Inked Keto bread, 2 slices ham each, and 1 tablespoon mayonnaise total",
+    "calories": 394,
+    "fat": 26.3,
+    "protein": 36.0,
+    "carbohydrates": 44.0,
+    "fiber": 40.0
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [
+    {
+      "mealName": "Fuji apple",
+      "calories": 95,
+      "fat": 0.3,
+      "protein": 0.5,
+      "carbohydrates": 25.1,
+      "fiber": 4.4
+    },
+    {
+      "mealName": "Protein shake with 25 grams whey",
+      "calories": 100,
+      "fat": 1.5,
+      "protein": 20.0,
+      "carbohydrates": 3.0,
+      "fiber": 0.0
+    }
+  ],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-10-02T15:20:00-07:00",
+  "dailyTotal": {
+    "calories": 1079,
+    "fat": 60.5,
+    "protein": 88.9,
+    "carbohydrates": 86.0,
+    "fiber": 46.4
+  },
+  "waterOz": 0
+}
