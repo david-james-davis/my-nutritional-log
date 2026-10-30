@@ -35,11 +35,17 @@
       "fiber": 11.5
     }
   ],
-  "exercise": [],
+  "exercise": [
+    {
+      "activity": "moderate pace walking (4.79 miles)",
+      "durationMinutes": 96,
+      "caloriesBurned": 531
+    }
+  ],
   "exerciseTotal": {
-    "caloriesBurned": 0
+    "caloriesBurned": 531
   },
-  "updatedAt": "2026-10-29T19:59:06-07:00",
+  "updatedAt": "2026-10-29T20:01:51-07:00",
   "dailyTotal": {
     "calories": 1706,
     "fat": 83.7,
