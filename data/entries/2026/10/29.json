@@ -25,18 +25,27 @@
     "carbohydrates": 0,
     "fiber": 0
   },
-  "snacks": [],
+  "snacks": [
+    {
+      "mealName": "3 medium Gala apples",
+      "calories": 333,
+      "fat": 0.8,
+      "protein": 0.7,
+      "carbohydrates": 80.8,
+      "fiber": 11.5
+    }
+  ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-10-29T09:20:35-07:00",
+  "updatedAt": "2026-10-29T19:53:55-07:00",
   "dailyTotal": {
-    "calories": 502,
-    "fat": 34.2,
-    "protein": 32.4,
-    "carbohydrates": 13.7,
-    "fiber": 1.9
+    "calories": 835,
+    "fat": 35.0,
+    "protein": 33.1,
+    "carbohydrates": 94.5,
+    "fiber": 13.4
   },
   "waterOz": 0
 }
