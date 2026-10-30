@@ -18,12 +18,12 @@
     "fiber": 20.0
   },
   "dinner": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "Half-pound hamburger patty (80/20, 8 oz raw), 1/2 cup nonfat Greek yogurt, 1 sheet lavash bread",
+    "calories": 648,
+    "fat": 33.7,
+    "protein": 67.5,
+    "carbohydrates": 20.1,
+    "fiber": 4.0
   },
   "snacks": [
     {
@@ -39,13 +39,13 @@
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-10-29T19:56:15-07:00",
+  "updatedAt": "2026-10-29T19:59:06-07:00",
   "dailyTotal": {
-    "calories": 1058,
-    "fat": 50.0,
-    "protein": 51.4,
-    "carbohydrates": 116.9,
-    "fiber": 33.4
+    "calories": 1706,
+    "fat": 83.7,
+    "protein": 118.9,
+    "carbohydrates": 137.0,
+    "fiber": 37.4
   },
   "waterOz": 0
 }
