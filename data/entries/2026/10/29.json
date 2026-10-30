@@ -33,6 +33,14 @@
       "protein": 0.7,
       "carbohydrates": 80.8,
       "fiber": 11.5
+    },
+    {
+      "mealName": "3/4 cup nonfat Greek yogurt, 2 tbsp honey, 1/2 cup homemade granola",
+      "calories": 530,
+      "fat": 15.4,
+      "protein": 26.0,
+      "carbohydrates": 73.7,
+      "fiber": 5.5
     }
   ],
   "exercise": [
@@ -45,13 +53,13 @@
   "exerciseTotal": {
     "caloriesBurned": 531
   },
-  "updatedAt": "2026-10-29T20:01:51-07:00",
+  "updatedAt": "2026-10-29T20:04:30-07:00",
   "dailyTotal": {
-    "calories": 1706,
-    "fat": 83.7,
-    "protein": 118.9,
-    "carbohydrates": 137.0,
-    "fiber": 37.4
+    "calories": 2236,
+    "fat": 99.1,
+    "protein": 144.9,
+    "carbohydrates": 210.7,
+    "fiber": 42.9
   },
   "waterOz": 0
 }
