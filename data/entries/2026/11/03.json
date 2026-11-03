@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-03",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "5 fried eggs, half sweet potato, 1 medium banana, 1 medium Gala apple",
+    "calories": 718,
+    "fat": 34.9,
+    "protein": 33.9,
+    "carbohydrates": 67.6,
+    "fiber": 8.8
+  },
+  "lunch": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-11-03T09:10:17-08:00",
+  "dailyTotal": {
+    "calories": 718,
+    "fat": 34.9,
+    "protein": 33.9,
+    "carbohydrates": 67.6,
+    "fiber": 8.8
+  },
+  "waterOz": 0
+}
