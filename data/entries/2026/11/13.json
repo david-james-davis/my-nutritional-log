@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-13",
+  "timezone": "America/Los_Angeles",
+  "breakfast": {
+    "mealName": "2 fried eggs, 1 medium Gala apple",
+    "calories": 291,
+    "fat": 13.9,
+    "protein": 12.7,
+    "carbohydrates": 27.7,
+    "fiber": 3.8
+  },
+  "lunch": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "dinner": {
+    "mealName": "",
+    "calories": 0,
+    "fat": 0,
+    "protein": 0,
+    "carbohydrates": 0,
+    "fiber": 0
+  },
+  "snacks": [],
+  "exercise": [],
+  "exerciseTotal": {
+    "caloriesBurned": 0
+  },
+  "updatedAt": "2026-11-13T08:23:23-08:00",
+  "dailyTotal": {
+    "calories": 291,
+    "fat": 13.9,
+    "protein": 12.7,
+    "carbohydrates": 27.7,
+    "fiber": 3.8
+  },
+  "waterOz": 0
+}
