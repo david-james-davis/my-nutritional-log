@@ -33,19 +33,27 @@
       "protein": 0.2,
       "carbohydrates": 26.9,
       "fiber": 3.8
+    },
+    {
+      "mealName": "matcha tea with 1 tbsp honey",
+      "calories": 70,
+      "fat": 0.1,
+      "protein": 0.7,
+      "carbohydrates": 18.1,
+      "fiber": 0.8
     }
   ],
   "exercise": [],
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-11-13T14:13:53-08:00",
+  "updatedAt": "2026-11-13T14:14:53-08:00",
   "dailyTotal": {
-    "calories": 681,
-    "fat": 31.4,
-    "protein": 37.3,
-    "carbohydrates": 89.4,
-    "fiber": 37.6
+    "calories": 751,
+    "fat": 31.5,
+    "protein": 38.0,
+    "carbohydrates": 107.5,
+    "fiber": 38.4
   },
   "waterOz": 0
 }
