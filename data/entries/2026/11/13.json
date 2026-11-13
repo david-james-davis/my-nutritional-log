@@ -10,12 +10,12 @@
     "fiber": 3.8
   },
   "lunch": {
-    "mealName": "",
-    "calories": 0,
-    "fat": 0,
-    "protein": 0,
-    "carbohydrates": 0,
-    "fiber": 0
+    "mealName": "turkey sandwich (3 slices Inked Keto sourdough, 1 tbsp Primal Kitchen avocado oil mayo, 3 slices deli turkey breast)",
+    "calories": 279,
+    "fat": 17.2,
+    "protein": 24.4,
+    "carbohydrates": 34.8,
+    "fiber": 30.0
   },
   "dinner": {
     "mealName": "",
@@ -30,13 +30,13 @@
   "exerciseTotal": {
     "caloriesBurned": 0
   },
-  "updatedAt": "2026-11-13T08:23:23-08:00",
+  "updatedAt": "2026-11-13T14:13:41-08:00",
   "dailyTotal": {
-    "calories": 291,
-    "fat": 13.9,
-    "protein": 12.7,
-    "carbohydrates": 27.7,
-    "fiber": 3.8
+    "calories": 570,
+    "fat": 31.1,
+    "protein": 37.1,
+    "carbohydrates": 62.5,
+    "fiber": 33.8
   },
   "waterOz": 0
 }
