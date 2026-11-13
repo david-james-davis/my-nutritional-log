@@ -43,11 +43,17 @@
       "fiber": 0.8
     }
   ],
-  "exercise": [],
+  "exercise": [
+    {
+      "activity": "vigorous pace walking (~4 mph)",
+      "durationMinutes": 60,
+      "caloriesBurned": 474
+    }
+  ],
   "exerciseTotal": {
-    "caloriesBurned": 0
+    "caloriesBurned": 474
   },
-  "updatedAt": "2026-11-13T14:14:53-08:00",
+  "updatedAt": "2026-11-13T14:15:26-08:00",
   "dailyTotal": {
     "calories": 751,
     "fat": 31.5,
