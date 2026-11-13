@@ -41,6 +41,14 @@
       "protein": 0.7,
       "carbohydrates": 18.1,
       "fiber": 0.8
+    },
+    {
+      "mealName": "protein shake (2 scoops Ascent Native Fuel Vanilla Bean whey, water)",
+      "calories": 240,
+      "fat": 2.0,
+      "protein": 50.0,
+      "carbohydrates": 4.0,
+      "fiber": 1.0
     }
   ],
   "exercise": [
@@ -53,13 +61,13 @@
   "exerciseTotal": {
     "caloriesBurned": 474
   },
-  "updatedAt": "2026-11-13T14:15:26-08:00",
+  "updatedAt": "2026-11-13T14:35:32-08:00",
   "dailyTotal": {
-    "calories": 751,
-    "fat": 31.5,
-    "protein": 38.0,
-    "carbohydrates": 107.5,
-    "fiber": 38.4
+    "calories": 991,
+    "fat": 33.5,
+    "protein": 88.0,
+    "carbohydrates": 111.5,
+    "fiber": 39.4
   },
   "waterOz": 0
 }
